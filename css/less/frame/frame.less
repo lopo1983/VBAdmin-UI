@@ -1,0 +1,39 @@
+body {
+    font-family: @ffmix;
+    color: @cc;
+    font-size: 14px;
+}
+@font-face {
+    font-family: 'robote';
+    src:url('../lib/font/roboto-thin.eot') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../lib/font/roboto-thin.woff') format('woff'),
+    /* chrome、firefox */
+    url('../lib/font/roboto-thin.ttf') format('truetype'),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../lib/font/roboto-thin.svg') format('svg');
+}
+ ::selection {
+    color: @cwh;
+    text-shadow: none;
+    background: @cc;
+}
+label,
+th {
+    font-weight: normal;
+}
+.full-width {
+    position: relative;
+    background-color: @cbla;
+    width: 100%;
+    .ohd;
+    z-index: 1;
+}
+.mask{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:rgba(0,0,0,.1) url(../../img/pattern.png) repeat ;
+}

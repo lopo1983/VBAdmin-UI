@@ -1,0 +1,74 @@
+body,
+html {
+    height: 100%;
+}
+.vba-box {
+    height: 100%;
+    background-color: @cwh;
+    position: relative;
+    background: url("https://qmarket.bj.bcebos.com/PB150703.jpg") no-repeat center center;
+    .logo-info,
+    .mix {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+    .logo-info {
+        background-color: @cre;
+        color: @cwh;
+        width: 400px;
+        height: 400px;
+        cursor: pointer;
+        .trs;
+        &:hover {
+            -moz-box-shadow: 0 10px 30px rgba(0, 0, 34,.5);
+            -webkit-box-shadow: 0 10px 30px rgba(0, 0, 34,.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 34,.5);
+            -webkit-transform: translate(-50%,-51%);
+            -moz-transform: translate(-50%,-51%);
+            -ms-transform: translate(-50%,-51%);
+            -o-transform: translate(-50%,-51%);
+            transform: translate(-50%,-51%);
+        }
+    }
+    .mix {
+        width: 100%;
+    }
+    .name {
+        .tac;
+        color: @cwh;
+        &.en {
+            .mgt(0);
+            .mgb(0);
+        }
+    }
+    h1.name {
+        font-size: 52px;
+    }
+    .info {
+        .pd(@mpb @mpb*3);
+        .tac;
+        opacity: 0.7;
+        a {
+            color: @cwh;
+            .mgl(5px);
+            .mgr(5px);
+        }
+    }
+    .mouse {
+        position: absolute;
+        bottom: 3*@mpb;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        border-color: @cwh;
+        &:before{
+            background-color: @cwh;
+        }
+    }
+}

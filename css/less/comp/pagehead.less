@@ -1,0 +1,90 @@
+//
+.page-header {
+    position: relative;
+    margin: 0 0 20px;
+    padding-bottom: 15px;
+    .unbd;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        position: relative;
+        margin: 0;
+        color: @cc;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 24px;
+        height: 4px;
+        background-color: rgb(181,181,181);
+        bottom: 0;
+        left: 0;
+    }
+    &.hasbdr {
+        .bdrb;
+        &:after {
+            width: 0;
+            height: 0;
+        }
+    }
+    &.date {
+        .pd(0);
+        .mg(0);
+        margin: 40px 0 25px;
+        background: url(../../img/news-divider.png) -30% 0 no-repeat;        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            .mg(0);
+            .pd(0);
+            .pdt(2*@mpb);
+        }
+        &:after {
+            width: 0;
+            height: 0;
+        }
+        &.first {
+            .mg(0);
+            background: none;
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                line-height: 60px;
+            }            
+        }
+    }
+    .small {
+        font-size: 0.7em;
+        margin-left: 10px;
+    }
+    &.item-header {
+        h3,
+        h4,
+        h5 {
+            margin-top: 0;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+            &:hover {
+                color: @ces;
+            }
+        }
+    }
+    .video-warp &{
+        h1,
+            h2,
+            h3,
+            h4,
+            h5{
+                color: @cwh;
+            }
+    }
+}

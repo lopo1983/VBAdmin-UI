@@ -1,0 +1,61 @@
+a.thumbnail {
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    .unbdr;
+    .unbd;
+    &.product {
+        background-color: @cwh;
+        .unbd;
+        margin-bottom: 0;
+        img {
+            .trs;
+        }
+    }
+    &.dtmiss {
+        img {
+            width: 100%;
+        }
+        .thumbnail-object {
+            position: relative;
+            z-index: 1;
+            .overly,
+            .content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+            .overly {
+                background: url("../../img/dtmiss/angled-overlay.png") no-repeat bottom center;
+                background-size: 100% auto;
+                z-index: 2;
+            }
+            .content {
+                background-color: rgb(175,19,17);
+                color: @cwh;
+                opacity: 0;
+                z-index: 3;
+                .pd(3*@mpb);
+                .trs;
+            }
+        }
+        .caption {
+            background-color: rgb(252,4,3);
+            text-align: center;
+            h4{
+                color: rgb(125,11,8);
+            }
+            .tit{
+                color: @cwh;
+            }
+        }
+        &:hover {
+            .content {
+                opacity: 1;
+            }
+        }
+    }
+}
