@@ -1,0 +1,278 @@
+input {
+    &:focus {
+        height: 3*@mpb;
+    }
+    &.form-control {
+        .trs;
+        height: 46px;
+        &.pw {
+            &:focus {
+                &::-webkit-input-placeholder {
+                    color: @cwh;
+                }
+            }
+            &::-webkit-input-placeholder {
+                color: @cwh*0.8;
+                .trs;
+            }
+        }
+        &:focus{
+           .unbs;
+        }
+    }
+}
+textarea {
+    &.form-control {
+        height: auto;
+        .unbd;
+        .unbs;
+        .bdrb;
+        resize: none;
+        &:focus {
+            .unbs;
+        }
+
+    }
+    &::-webkit-scrollbar-track {
+        width: 3px;
+        background-color: @cgy;
+    }
+
+    &::-webkit-scrollbar {
+        width: 3px;
+        height: @mpb;
+        background-color: @ces;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: @ces;
+    }
+}
+@luc: @cgy1*0.82;
+//input::-webkit-input-placeholder,
+//textarea::-webkit-input-placeholder {
+//  color: @luc;
+//}
+//input:-moz-placeholder,
+//textarea:-moz-placeholder {
+//  color: @luc;
+//}
+//input:-ms-input-placeholder,
+//textarea:-ms-input-placeholder {
+//  color: @luc;
+//}
+//
+input.label-up,
+input.line {
+    &.error,
+    &.success {
+        position: relative;
+        color: @cwh;
+        &:focus {
+            .unbg;
+            color: inherit;
+            &+.line-label{
+                &:before{
+                    opacity: 0;
+                }
+            }
+        }
+        &+.line-label {
+            &:before {
+                content: "";
+                .iconfont;
+                position: absolute;
+                right: 0;
+                .amid;
+                left: initial;
+                color: @cwh;
+                font-size: 20px;
+                opacity: 1;
+            }
+        }
+    }
+    &.error {
+        background-color: @cre;
+        &+.line-label:before {
+            content: "\e608";
+        }
+    }
+    &.success {
+        background-color: @cgr;
+        &+.line-label {
+            &:before {
+                content: "\e621";
+            }
+            &:after {
+                background-color: @cgr;
+            }
+        }
+    }
+}
+input.line {
+    &.error,
+    &.success {
+        &+.line-label {
+            &:before {
+                top: -20px;
+            }
+        }
+    }
+}
+input.label-up {
+    &.error,
+    &.success {
+        &+.line-label {
+            &:before {
+                opacity: 1;
+                top: 10px;
+            }
+        }
+    }
+}
+//
+input.label-up,
+input.line {
+    .unbd;
+    .unbs;
+    .bdrb;
+    &:focus {
+        .unbs;
+    }
+}
+//
+.form-control.line {
+    .unbg;
+    &:focus {
+        border-color: @bdrc;
+    }
+    &:focus+.line-label {
+        &:after {
+            width: 100%;
+        }
+    }
+    &+.line-label {
+        position: relative;
+        display: block;
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            width: 0;
+            background-color: @ces;
+            .trs;
+        }
+    }
+    &.fix {
+        .trs;
+        position: relative;
+        z-index: 1;
+        color: @cwh;
+        .pdl;
+        .pdr;
+        .trs;
+        &.line {
+            &+.line-label {
+                &:before {
+                    content: "";
+                    opacity: 0;
+                    .trs;
+                }
+            }
+            &:focus+.line-label {
+                &:after {
+                    background-color: transparent;
+                }
+            }
+        }
+        &:focus {
+            background-color: @cwh;
+            border-radius: 100px;
+            color: @cwh*0.5;
+            z-index: 1001;
+            .pdl(20px);
+            .pdr(20px);
+            &+.line-label {
+                &:before {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    opacity: 0.8;
+                    z-index: 1000;
+                    width: 100%;
+                    height: 100%;
+                    background: @cbla;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}
+//
+input.label-up {
+    &::-webkit-input-placeholder {
+        color: @ces;
+    }
+    .unbd;
+    .unbs;
+    .bdrb;
+    .trs;
+    &+.line-label {
+        position: absolute;
+        color: @luc;
+        display: block;
+        left: 10px;
+        right: 0;
+        top: 50%;
+        bottom: 0;
+        .trs(@t:.3s);
+        span {
+            .trs;
+            //          -webkit-transition-delay: 0.2s;
+            //          -moz-transition-delay: 0.2s;
+            //          -ms-transition-delay: 0.2s;
+            //          -o-transition-delay: 0.2s;
+            //          transition-delay: 0.2s;
+            opacity: 0;
+        }
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    &:focus {
+        background-color: @ces;
+        color: @cwh;
+        &+.line-label {
+            span {
+                opacity: 1;
+                font-size: 12px;
+            };
+            -webkit-transform: translateY(-260%);
+            -moz-transform: translateY(-260%);
+            -ms-transform: translateY(-260%);
+            -o-transform: translateY(-260%);
+            transform: translateY(-260%);
+        }
+    }
+    &.error {
+        &+.line-label {
+            color: @cwh;
+        }
+        &:focus {
+            &+.line-label {
+                color: @luc;
+            }
+        }
+    }
+    .form-control+ & {
+        .mgt;
+    }
+}
+.line-label+.btn {
+    display: inline-block;
+}

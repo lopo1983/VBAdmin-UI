@@ -1,0 +1,26 @@
+.list {
+    .unst;
+    .mgb(0);
+}
+.list-nav {
+    &-tit {
+        .blod;
+        .mgb(ceil(@mpb));
+        color: @cc2;
+        &:not(:first-child) {
+            .mgt(ceil(@mpb));
+        }
+    }
+    li {
+        a {
+            color: @cc2;
+            &:hover {
+                color: @cc;
+                .unl;
+            }
+        }
+    }
+    &:not(:first-child) {
+        .mgt(ceil(2*@mpb));
+    }
+}

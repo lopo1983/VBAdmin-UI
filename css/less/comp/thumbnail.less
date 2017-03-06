@@ -1,61 +1,50 @@
-a.thumbnail {
+.thumbnail {
     position: relative;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
     .unbdr;
-    .unbd;
-    &.product {
-        background-color: @cwh;
-        .unbd;
-        margin-bottom: 0;
-        img {
-            .trs;
+    .mask {
+        z-index: 2;
+    }
+    &&-bg {
+        height: inherit;
+        position: relative;
+        .caption:only-child {
+            width: 100%;
+            height: 100%;
+            display: table;
+            .mix.amid {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+        .caption{
+            position: absolute;
+            width: 100%;
+            .pd(2*@mpb);
+            left: 0;
+            top: 0;
+            z-index: 10;
         }
     }
-    &.dtmiss {
-        img {
-            width: 100%;
+    &.lrmix{
+        .pd(0);
+        .ohd;
+        .thumbnail-object,.caption{
+            width: 50%;
+            display: block;
+            float: left;
         }
-        .thumbnail-object {
+        .thumbnail-object{
+            
+        }
+        .caption{
             position: relative;
-            z-index: 1;
-            .overly,
-            .content {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-            }
-            .overly {
-                background: url("../../img/dtmiss/angled-overlay.png") no-repeat bottom center;
-                background-size: 100% auto;
-                z-index: 2;
-            }
-            .content {
-                background-color: rgb(175,19,17);
-                color: @cwh;
-                opacity: 0;
-                z-index: 3;
-                .pd(3*@mpb);
-                .trs;
-            }
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
         }
-        .caption {
-            background-color: rgb(252,4,3);
-            text-align: center;
-            h4{
-                color: rgb(125,11,8);
-            }
-            .tit{
-                color: @cwh;
-            }
-        }
-        &:hover {
-            .content {
-                opacity: 1;
-            }
-        }
+    }
+    .mixbox &{
+        .mgb(0);
     }
 }

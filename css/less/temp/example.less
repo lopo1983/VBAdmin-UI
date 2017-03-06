@@ -6,6 +6,7 @@ html {
     height: 100%;
     background-color: @cwh;
     position: relative;
+    .mgb(2*@mpb);
     background: url("https://qmarket.bj.bcebos.com/PB150703.jpg") no-repeat center center;
     .logo-info,
     .mix {
@@ -38,9 +39,9 @@ html {
     }
     .mix {
         width: 100%;
+        .tac;
     }
     .name {
-        .tac;
         color: @cwh;
         &.en {
             .mgt(0);
@@ -52,13 +53,26 @@ html {
     }
     .info {
         .pd(@mpb @mpb*3);
-        .tac;
         opacity: 0.7;
         a {
             color: @cwh;
             .mgl(5px);
             .mgr(5px);
         }
+    }
+    .coding {
+        .bdr(@cr:@cwh);
+        color: @cwh;
+        .pdl(4*@mpb);
+        .pdr(4*@mpb);
+        .mgb(2*@mpb);
+        &:hover {
+            background-color: @cwh;
+            color: @ces;
+        }
+    }
+    .mask {
+        background: rgba(0,0,0,.2) url("../../img/pattern.png") repeat;
     }
     .mouse {
         position: absolute;
@@ -67,8 +81,182 @@ html {
         left: 0;
         right: 0;
         border-color: @cwh;
-        &:before{
+        &:before {
             background-color: @cwh;
         }
     }
+}
+.exp {
+    &-form {
+        .btn+.btn {
+            .mgt(2*@mpb)
+        }
+    }
+    &-sendmsg {
+        > div,
+        form {
+            background-color: @cwh;
+            .pd(3*@mpb 2*@mpb);
+            .mgb(2*@mpb);
+            .form-group:last-child {
+                .mgt(3*@mpb);
+            }
+        }
+        .tit {
+            .mgb(2*@mpb);
+        }
+    }
+    &-sendmail {
+        height: 513px;
+        .thumbnail-bg {
+            background: url("../../img/PB150703.jpg") no-repeat center center;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: rgba(0,0,0,.6) url("../../img/pattern.png") repeat;
+            }
+            .caption {
+                .mix {
+                    position: relative;
+                    z-index: 1;
+                    .pd(@mpb 2.5*@mpb);
+                    h3 {
+                        line-height: 1.4;
+                    }
+                }
+            }
+            button,
+            input {
+                .mgt(3*@mpb)
+            }
+        }
+    }
+    &-changesth {
+        .panel-body {
+            .pd(2*@mpb);
+            .pdt(33px);
+            .form-group:only-child {
+                .mgb(0);
+            }
+            .hasbtn {
+                .col-xs-7 {
+                    .pdl(0);
+                    .pdr(0);
+                }
+            }
+        }
+        .panel-footer {
+            .pd(0);
+            .btn-block {
+                .pd(@mpb 0)
+            }
+        }
+    }
+    &-lrmix {
+        background: url(@bgimg) no-repeat center center;
+        .thumbnail-object {
+            .pd(2*@mpb);
+            .mgt(20%);
+        }
+        .caption {
+            .form-horizontal {
+                .mgb(0)
+            }
+            .pd(0);
+        }
+    }
+    &-chginfo {
+        .media {
+            .pdl(3*@mpb);
+            .pdr(3*@mpb);
+            .pdt;
+            .pdb;
+        }
+        .user-header {
+            width: 100px;
+        }
+        .media-body {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                .mgt(0);
+            }
+            .pdl;
+            .info {
+                .mgb(0);
+            }
+        }
+        .panel-body {
+            .pdl(0);
+            .pdr(0);
+            .pdb(0);
+            .mix {
+                .pd;
+                .ohd;
+                background-color: @cwh*0.97;
+            }
+        }
+    }
+    &-tab {
+        background-color: @cwh;
+        .mgb;
+        .ohd;
+    }
+    &-navbar {
+        .vba-navbar:not(.navbar-inverse){
+            background-color: @cwh;
+        }
+        .icon-vbadmin {
+            font-size: 40px;
+            &:hover {
+                .trs;
+                color: @ces;
+            }
+        }
+        .navbar-nav {
+            .icon-seach,
+            .icon-spcar {
+                font-size: 20px;
+            }
+            .icon-fangda{
+                font-size: 30px;
+            }
+            .icon-seach {
+                .mgr(0)!important;
+            }
+            li.logo {
+                a {
+                    .pd(2*@mpb 0);
+                }
+            }
+        }
+        .list-nav{
+            li{
+                line-height:ceil(2.4*@mpb);
+            }
+        }
+    }
+}
+#inline-login {
+    background: url("https://qmarket.bj.bcebos.com/PB150703.jpg") no-repeat center center;
+    .mgb;
+    .mask {
+        background: rgba(0,0,0,.7) url("../../img/pattern.png") repeat;
+    }
+}
+.modal-login {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    display: block;
 }

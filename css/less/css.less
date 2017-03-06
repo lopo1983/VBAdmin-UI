@@ -1,6 +1,8 @@
+/*httpimg*/
+@bgimg: "https://qmarket.bj.bcebos.com/PB150703.jpg";
 /*颜色变量*/
-@ces: rgb(218,26,53); //颜色网站基础色
-@cun: transparent;//透明背景
+@ces: @cbl; //颜色网站基础色 阿森纳红
+@cun: transparent; //透明背景
 @cwh: rgb(255, 255, 255); //白色
 /*flat 推荐颜色*/
 /*http://bsfans.com/fc/index.html*/
@@ -24,12 +26,14 @@
 @cc2: rgb(153,153,153); //文字主要颜色
 @cc3: rgb(51,51,51); //文字主要颜色
 /*背景色*/
-@bgc: rgb(66, 69, 79);
+@bgc: rgb(34, 34, 34);
 @bgcc: rgb(21, 33, 47);
 @bgc1: rgb(241, 241, 241);
-@bgc2: rgb(230,230,230);
+@bgc2: rgb(238,238,238);
 @bgc3: rgb(244,244,244);
 @bgc4: rgb(54, 62, 75);
+//
+@cbsw: rgb(252, 248, 227);
 //
 /*边框颜色*/
 @bdrc: rgb(225, 225, 225); //边框颜色
@@ -38,9 +42,9 @@
 /*   */
 /*其他常用变量*/
 /*文字*/
-@ffmix:"Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+@ffmix: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
 //
-@rem: 12px; //
+@rem: 14px; //
 @hack: ~"\9"; //
 //
 //边框控制
@@ -131,7 +135,7 @@
     padding-left: 0;
     list-style: none;
 }
-.unl{
+.unl {
     text-decoration: none;
 }
 //杂项
@@ -142,16 +146,16 @@
     overflow: hidden;
 }
 //文字方向控制
-.tac{
+.tac {
     text-align: center;
 }
-.tal{
+.tal {
     text-align: left;
 }
-.tar{
+.tar {
     text-align: right;
 }
-.taj{
+.taj {
     text-align: justify;
 }
 //
@@ -177,4 +181,30 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+}
+.mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.5) url("../../img/pattern.png") repeat;
+}
+//iconfont 建议使用强大的iconfont
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    display: inline-block;
+}
+//loop
+
+.col-loop(@n, @i:@cgy1) when (@i=<@n) {
+    .col-xs-@{i} {
+        .pdl(0);
+        .pdr(0);
+    }
+    .col-loop(@n,(@i+1));
 }

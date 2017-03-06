@@ -1,3 +1,29 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: @cc1;
+}
+h1 {
+    font-size: 34px;
+}
+h2 {
+    font-size: 26px;
+}
+h3 {
+    font-size: 20px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6{
+    font-size: 12px;
+}
+//
 .en {
     font-family: robote;
 }
@@ -19,65 +45,23 @@ span.baifen {
         content: "%";
     }
 }
-span.md {
-    font-size: 16px;
-    li & {
-        position: relative;
+//
+.help{
+    color: @cgy1;
+    label{
+        color: inherit;
     }
 }
-span.lg {
-    font-size: 18px;
-}
-.inline-block {
-    display: inline-block!important;
-}
-p.more {
-    margin-bottom: 0;
-}
-p.help {
-    margin-top: 15px;
-}
-span.help {
-    display: block;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
-    border-radius: 10px;
-    color: @cwh;
-    background-color: @cye1*1.3;
-    cursor: pointer;
-    .trs;
-    &:hover {
-        background-color: @cgr1;
-    }
-    .form-group & {
-        top: 8px;
-        right: -20px;
-    }
+p.info{
+    color: @cc2;
 }
 .pabs {
     position: absolute;
 }
 a {
     cursor: pointer;
-}
-.msgbox {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-        color: @cc;
-    }
-    p {
-        color: @cc1;
-    }
-}
-.btnbox {
-    p {
-        margin: 15px 0;
-    }
+    color:@ces;
+    .trs(@t:.2s);
 }
 .form-control {
     .unbdr;

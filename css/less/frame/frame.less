@@ -13,7 +13,7 @@ body {
     /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
     url('../lib/font/roboto-thin.svg') format('svg');
 }
- ::selection {
+::selection {
     color: @cwh;
     text-shadow: none;
     background: @cc;
@@ -29,11 +29,33 @@ th {
     .ohd;
     z-index: 1;
 }
-.mask{
+//.column-columns-(4);
+//.column-columns-(@n, @i: 1) when (@i =< @n) {
+//  .column-@{i} {
+//      -webkit-column-count: @i;
+//      -moz-column-count: @i;
+//      column-count: @i;
+//  }
+//  .generate-columns(@n, (@i + 1));
+//}
+.loopcol(6);
+
+.loopcol(@n, @i: 1) when (@i =< @n) {
+  .vba-column-@{i} {
+        -webkit-column-count: @i;
+        -moz-column-count: @i;
+        column-count: @i;
+        -webkit-column-gap: @mpb*2;
+        -moz-column-gap: @mpb*2;
+        column-gap: @mpb*2;
+  }
+  .loopcol(@n, (@i + 1));
+}
+.mask {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background:rgba(0,0,0,.1) url(../../img/pattern.png) repeat ;
+    background: rgba(0,0,0,.5) url("../../img/pattern.png") repeat;
 }

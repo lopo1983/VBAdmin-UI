@@ -19,4 +19,25 @@
     .media-right {
         position: relative;
     }
+    &&-form{
+        .media-body{
+            .pd(@mpb 2*@mpb);
+            background-color: @cbla;
+            .form-group{
+                .mgb(0);
+            }
+            input{
+                color: @cwh;
+                &.line{
+                    .unbd;
+                }
+            }
+        }
+        .media-right{
+            .pdl(0);
+        }
+        .btn{
+            .pd(2*@mpb 3*@mpb)
+        }
+    }
 }

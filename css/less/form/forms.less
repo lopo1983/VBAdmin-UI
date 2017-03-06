@@ -1,0 +1,22 @@
+@import "btn.less";
+@import "input.less";
+@import "crbox.less";
+@import "inputgroup.less";
+.form-group {
+    position: relative;
+    .control-label {
+        padding-top: 13px;
+        color: @cgy1*0.82;
+        &.forta {
+            padding-top: 7px;
+        }
+    }
+    .form-horizontal &.hasbtn {
+        .col-loop(12);
+        .btn-lg {
+            .pdl;
+            .pdr;
+        }
+    }
+
+}

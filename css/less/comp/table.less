@@ -1,175 +1,175 @@
 //
-.table>thead>tr>th {
-    border-bottom: 1px solid #ddd;
+.table > thead > tr > th {
+    .blod;
+    .bdrb;
 }
-.table-hover {
-    .bdr(@cr:#ddd);
-    thead,
-    tfoot {
-        background-color: rgb(245, 246, 250);
+.table {
+    @c: @ces*4.5; //定义tr 背景颜色
+    &:only-of-type{
+        .mgb(0);
+        .bdrb;
     }
-    tfoot {
-        .pagination-info {
-            display: inline-block;
-            vertical-align: middle;
-            zoom: 1;
-            padding: 0 16px;
-            color: #888;
-        }
-        .pagination {
-            display: inline-block;
-            margin: 0;
-            vertical-align: middle;
-            border-radius: 0;
-        }
-        .pagination-goto {
-            display: inline-block;
-            vertical-align: middle;
-            zoom: 1;
-            padding: 0 15px;
-            .ipt {
-                width: 40px;
-                display: inline-block;
-                margin-right: 6px;
-            }
-        }
+    a:hover{
+        text-decoration: none;
     }
-}
-.fixture-table {
-    .bdrt(@w:@mpb,@cr:@ces);
-    box-sizing: content-box;
-    .table {
-        .unbd;
-        th,
-        td {
-            .unbd;
-            height: 60px;
-            vertical-align: middle;
-            text-align: center;
-        }
-        th {
-            color: @cwh;
-        }
-        thead {
-            background-color: @cbla;
+    tbody,
+    tfoot,
+    thead {
+        tr {
             th {
-                .blod;
+                &,
+                td {
+                    &:first-child {
+                        .pdl(2*@mpb);
+                    }
+                }
+            }
+            td,
+            th {
+                .pd;
+                .trs;
             }
         }
-        tbody {
-            tr {
-                background-color: @bgc2;
-                .bdrb(@cr:@cwh);
-                &.mouth {
+    }
+    thead {
+        .blod;
+        border-bottom: 1px solid #ddd;
+        .table-striped&{
+            th{
+                .unbd;
+            }
+        }
+        tr.sortmix{
+            th:not(.lock){
+                .pd(0);
+                .btn{
+                    line-height: 20px;
+                    width: 100%;
+                    .tal;
+                    .unbd;
                     .unbg;
-                    h4 {
+                    .pd;
+                    .blod;
+                    &:hover{
+                        background-color: @cgy*1.05;
+                    }
+                    &.active{
+                        .unbs;
+                    }
+                    &:active,&:focus{
+                        outline: none;
+                    }
+                    .iconfont;
+                    font-size: 14px;
+                    &:before{
+                        content: "\e626";
+                        position: absolute;
+                        right: 5px;
                         color: @cc2;
                     }
+                    &.unicon{
+                        &:before{
+                            content: "";
+                        }
+                    }
                 }
-            }
-            .date {
-                span+span {
-                    .mgl;
-                }
-            }
-            .against {
-                cursor: pointer;
-                .blod;
-                font-size: 14px;
-                &:hover {
-                    color: @ces;
-                }
-            }
-            .home,
-            .away {
-                span {
-                    display: block;
-                    width: 3.5*@mpb;
-                    height: 3.5*@mpb;
-                    line-height: 3.5*@mpb;
-                    text-align: center;
-                    .blod;
-                    margin: 0 auto;
-                }
-            }
-            .home {
-                span {
-                    background-color: @ces;
-                    color: @cwh;
-                    border-radius: 4px;
-                }
-            }
-            .away {
-                span {
-                    background-color: @cgy;
-                }
-            }
-            .score {
-                span {
-                    display: table-cell;
-                    width: 1%;
-                    font-size: 16px;
-                    &.home {
-                        color: @ces;
+                &:first-child{
+                    .btn{
+                        .pdl(2*@mpb)
                     }
                 }
             }
         }
     }
-}
-.league-table {
-    .table-header {
-        background-color: rgb(54, 62, 75);
-        color: @cwh;
-        line-height: 40px;
-        height: 40px;
-        .bdrt(@w:@mpb,@cr:@ces);
-        box-sizing: content-box;
-        font-size: 16px;
-        .pdl;
-    }
-    .table {
-        background-color: @bgc3;
-        thead {
-            th {
-                font-weight: 700;
-                border-color: transparent;
-                border-bottom-color: @cwh;
-            }
+    tbody {
+        tr,th,td{
+            .trs;
+            
         }
-        th,
-        td {
-            border-color: @cwh;
-        }
-        tr {
-            &.active {
-                td {
-                    background-color: @cwh;
-                    color: @ces;
-                }
-            }
-        }
-        tfoot {
-            td {
-                .pd(0);
-                a {
-                    text-align: right;
-                }
-            }
-        }
-    }
-}
-//
-.league-table {
-    &.fixture {
         th,td{
-            text-align: center;
-            background-color: @bgc2;
-            &.light{
-                background-color:@bgc3 ;
+            
+        }
+        a,button{
+            &.control{
+                .pd(8px);
+                .bdr;
+                background-color: @ces;         
+                .iconfont{
+                    color: @cwh;
+                    font-size: 14px;
+                }
             }
-            &.name{
-                text-align: left;
+        }
+    }
+    tr.filter,tr.edit{
+        td,th{
+            .pd(8px @mpb);
+            vertical-align: middle;
+        }
+        .form-control{
+            height: auto;
+            &.line{
+                padding-right: 24px;
+                &+.line-label{
+                    .mgb(0)
+                }
+            }          
+        }
+    }  
+    tr.edit{
+        td,th{
+            .form-control{
+                .pdl(0);
+            }
+        }
+        background-color: @cbsw;
+        .control{
+            background-color: @cgr;
+        }
+    }  
+    tr.filter{
+        .form-control{
+            font-weight: normal;
+            &.line{
+                &+.line-label{
+                    &:before{
+                        .iconfont;
+                        content: "\e662";
+                        color: @cc2;
+                        position: absolute;
+                        top: -15px;
+                        right: 12px;
+                        -webkit-transform: translateY(-50%);          
+                        -moz-transform: translateY(-50%);;
+                        -ms-transform: translateY(-50%);
+                        -o-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                    }                
+                }                
+            }
+            &:focus+.line-label{
+                &:before{
+                    content: "";
+                }
+            }
+        }
+    }
+    .form-group{
+        .mgb(0);
+    }
+    &-ces {
+        >tbody {
+            >tr {
+                .table-striped& {
+                    &:nth-of-type(odd) {
+                        background-color: @c;
+                    }
+                }
+                .table-hover& {
+                    &:hover {
+                        background-color: @c;
+                    }
+                }
             }
         }
     }
