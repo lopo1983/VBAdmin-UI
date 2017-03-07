@@ -210,7 +210,7 @@ html {
         .ohd;
     }
     &-navbar {
-        .vba-navbar:not(.navbar-inverse){
+        .vba-navbar:not(.navbar-inverse) {
             background-color: @cwh;
         }
         .icon-vbadmin {
@@ -225,7 +225,7 @@ html {
             .icon-spcar {
                 font-size: 20px;
             }
-            .icon-fangda{
+            .icon-fangda {
                 font-size: 30px;
             }
             .icon-seach {
@@ -237,9 +237,52 @@ html {
                 }
             }
         }
-        .list-nav{
-            li{
-                line-height:ceil(2.4*@mpb);
+        .mixbox.down {
+            background-color: @cwh;
+            .mgb;
+        }
+        .list-nav {
+            li {
+                line-height: ceil(2.4*@mpb);
+            }
+        }
+        &-mb {
+            .listmix {
+                background-color: @bgc4;
+                .pd(@mpb 0);
+            }
+            .list-nav {
+                li {
+                    line-height: ceil(2.9*@mpb);
+                    .pdl(2*@mpb);
+                    .pdr(2*@mpb);
+                    a {
+                        display: block;
+                        &:hover,&:active,&:focus {
+                            color: @cwh;
+                            .unl;
+                        }
+                    }
+                    &.active {
+                        background-color: @ces;
+                        a {
+                            color: @cwh;
+                        }
+                    }
+                }
+            }
+            .thumbnail {
+                .exp {
+                    h3 {
+                        .mgt(5*@mpb);
+                    }
+                    .btn {
+                        .mgt(3*@mpb);
+                    }
+                }
+            }
+            .pro {
+                .pd(0);
             }
         }
     }

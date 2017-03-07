@@ -1,4 +1,4 @@
-@mixboxc:@cwh*0.95;
+@mixboxc: @cwh*0.95;
 .top-navbar {
     .pd;
     .bdrb;
@@ -60,41 +60,39 @@
     &.unbg {
         .unbg;
     }
-    &.vba-navbar{
-        &+&-down{
+    
+    &.vba-navbar {
+        &+&-down {
             .mgt(-20px);
-            .navbar-collapse{
+            .navbar-collapse {
                 .bdrt;
             }
         }
-        &+.top-navbar{
+        &+.top-navbar {
             .mgt(-20px);
             background-color: @mixboxc;
-            .list-inline{
-                li{
-                    .pdl;.pdr;
+            .list-inline {
+                li {
+                    .pdl;
+                    .pdr;
                 }
             }
-            a{
-                &:hover{
+            a {
+                &:hover {
                     text-decoration: none;
                     color: @cc;
                 }
-                font-size:@rem;
+                font-size: @rem;
             }
         }
-        &+.mixbox{
+        &+.mixbox {
             background-color: @cwh;
-            &:after{
-                content: "";
-                display: table;
-                clear: both;
-            }
+            .mgb(ceil(@mpb*1.3));
             .mgt(-20px);
             .pd(2*@mpb @mpb 0 @mpb);
-            &.down{
+            &.down {
                 .mgt(ceil(-@mpb/2))
-            }            
+            }
         }
     }
     &.vba-navbar {
@@ -154,10 +152,10 @@
                         }
                     }
                 }
-                &.arrow{
-                    li{
-                        &.active{
-                            &:before{
+                &.arrow {
+                    li {
+                        &.active {
+                            &:before {
                                 content: "";
                                 position: absolute;
                                 bottom: 0;
@@ -172,10 +170,10 @@
                             }
                         }
                     }
-                    &.down{
-                        li{
-                            &.active{
-                                &:before{
+                    &.down {
+                        li {
+                            &.active {
+                                &:before {
                                     bottom: -@mpb;
                                     border-bottom-color: @cwh;
                                 }

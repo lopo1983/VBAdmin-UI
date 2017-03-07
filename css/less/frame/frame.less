@@ -41,15 +41,15 @@ th {
 .loopcol(6);
 
 .loopcol(@n, @i: 1) when (@i =< @n) {
-  .vba-column-@{i} {
+    .vba-column-@{i} {
         -webkit-column-count: @i;
         -moz-column-count: @i;
         column-count: @i;
         -webkit-column-gap: @mpb*2;
         -moz-column-gap: @mpb*2;
         column-gap: @mpb*2;
-  }
-  .loopcol(@n, (@i + 1));
+    }
+    .loopcol(@n, (@i + 1));
 }
 .mask {
     position: absolute;
@@ -58,4 +58,11 @@ th {
     bottom: 0;
     left: 0;
     background: rgba(0,0,0,.5) url("../../img/pattern.png") repeat;
+}
+.mixbox {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }

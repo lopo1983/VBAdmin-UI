@@ -3,7 +3,6 @@ A bootstrap tempale UI
 
 作者：lopo1983
 website： www.bsfans.com
-项目地址：https://coding.net/u/lopo/p/VBAdmin-UI/git
 QQ/微信：64832897  讨论群：15832082
 时间：2017-02-23
 版本：v1.0.0
