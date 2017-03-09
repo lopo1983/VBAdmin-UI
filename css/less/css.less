@@ -95,6 +95,16 @@
 .pdl(@a:@mpb) {
     padding-left: @a;
 }
+//clear
+.clear{
+    &:before,&:after{
+        content: "";
+        display: table;
+    }
+    &:after{
+        clear: both;
+    }
+}
 //居中
 .amid {
     position: absolute;

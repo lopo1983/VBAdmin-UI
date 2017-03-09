@@ -258,7 +258,9 @@ html {
                     .pdr(2*@mpb);
                     a {
                         display: block;
-                        &:hover,&:active,&:focus {
+                        &:active,
+                        &:focus,
+                        &:hover {
                             color: @cwh;
                             .unl;
                         }
@@ -284,7 +286,21 @@ html {
             .pro {
                 .pd(0);
             }
+            .tab-content {
+                .list {
+                    li {
+                        a {
+                            &:hover {
+                                color: @cc;
+                            }
+                        }
+                    }
+                }
+            }
         }
+    }
+    &-footer {
+        .mgb;
     }
 }
 #inline-login {
