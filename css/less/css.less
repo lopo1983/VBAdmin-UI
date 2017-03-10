@@ -96,12 +96,13 @@
     padding-left: @a;
 }
 //clear
-.clear{
-    &:before,&:after{
+.clear {
+    &:after,
+    &:before {
         content: "";
         display: table;
     }
-    &:after{
+    &:after {
         clear: both;
     }
 }
@@ -198,7 +199,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,.5) url("../../img/pattern.png") repeat;
 }
 //iconfont 建议使用强大的iconfont
 .iconfont {
@@ -217,4 +217,13 @@
         .pdr(0);
     }
     .col-loop(@n,(@i+1));
+}
+
+//extend
+.absfull {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }

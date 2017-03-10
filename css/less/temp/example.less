@@ -302,20 +302,58 @@ html {
     &-footer {
         .mgb;
     }
+    &-cavmix {
+        .clear;
+        .cavmix {
+            height: 100vh;
+            .tit {
+                &1 {
+                    font-size: 5*@mpb;
+                }
+                &2 {
+                    font-size: 3*@mpb;
+                }
+                &3 {
+                    font-size: ceil(2.5*@mpb);
+                }
+                &4 {
+                    font-size: ceil(2*@mpb);
+                }
+                &1+&2 {
+                    .mgt(2*@mpb)
+                }
+            }
+            .btn {
+                .mgt(2*@mpb);
+                .pd(@mpb 5*@mpb);
+            }
+        }
+    }
 }
+//
+#exp-cavmix {
+    &1 {
+        background: url("../../img/bg.jpg") no-repeat top center;
+        background-size: 100% auto;
+    }
+    &2 {
+        background: url("../../img/bg1.jpg") no-repeat center right;
+        background-size: 100% auto;
+    }
+    &3 {
+        background: url("../../img/Dphone.jpg") no-repeat center right;
+        background-size: 100% auto;
+    }
+    &4 {
+        background: url("../../img/phoneinDesk.jpg") no-repeat center right;
+        background-size: 100% auto;
+    }
+}
+//
 #inline-login {
     background: url("https://qmarket.bj.bcebos.com/PB150703.jpg") no-repeat center center;
     .mgb;
     .mask {
         background: rgba(0,0,0,.7) url("../../img/pattern.png") repeat;
     }
-}
-.modal-login {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    z-index: 1;
-    display: block;
 }

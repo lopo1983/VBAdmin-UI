@@ -2,13 +2,25 @@
 .top-navbar {
     .pd;
     .bdrb;
+    .clear;
+    position: relative;
     background-color: @cwh;
     .list-inline {
         display: inline-block;
         .mgb(0);
         a {
+            .trs;
             color: @cc2;
             font-size: ceil(@rem*0.8);
+        }
+    }
+    &.unbg {
+        .unbg;
+        border-color: @cc2*1.6;
+        a{
+            &:hover{
+                color: @ces;
+            }
         }
     }
 }
@@ -60,7 +72,7 @@
     &.unbg {
         .unbg;
     }
-    
+
     &.vba-navbar {
         &+&-down {
             .mgt(-20px);
@@ -150,6 +162,9 @@
                                 left: 0;
                             }
                         }
+                    }
+                    &.logo {
+                        .mgl(-@mpb);
                     }
                 }
                 &.arrow {
