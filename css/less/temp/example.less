@@ -329,6 +329,14 @@ html {
             }
         }
     }
+    &-nav{
+        .nav+.nav,.nav+.row,.row+.row{
+            .mgt;
+        }
+    }
+    &-label{
+        
+    }
 }
 //
 #exp-cavmix {
@@ -355,5 +363,32 @@ html {
     .mgb;
     .mask {
         background: rgba(0,0,0,.7) url("../../img/pattern.png") repeat;
+    }
+}
+//
+#nav-mix{
+    background-color: @cwh;
+    .pd(@mpb);
+}
+#expbox{
+    &-form{
+//      background-color: @cwh;
+    }
+}
+.exp{
+    &-tit{
+        h3{
+            color: @cc2;
+        }
+    }
+    &-box{
+        background-color: @cwh;
+        .pd;
+        .input-group{
+            .mgb;
+        }
+    }
+    &-box+&-box{
+        .mgt(ceil(2*@mpb));
     }
 }
