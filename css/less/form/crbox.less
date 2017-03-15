@@ -62,6 +62,14 @@
 .vba-chekbox,
 .vba-ridbox {
     margin-right: 15px;
+    .form-inline & {
+        .pdl(ceil(1.6*@mpb))!important;
+    }
+    td &,
+    th & {
+        .mg(0);
+        .pdl(0);
+    }
 }
 //
 .vba-rd+label {
@@ -76,6 +84,7 @@
 //
 .checkbox,
 .radio {
+    .mgb;
     &.inline {
         .vba-ck+label,
         .vba-rd+label {
@@ -84,10 +93,13 @@
     }
 }
 .toggle {
-    input[type="checkbox"]& {
+    input[type="checkbox"] & {
         display: none;
     }
-    &+&-label {
+    &-label {
+        .mgr(ceil(@mpb/2));
+    }
+    &+&-round {
         display: inline-block;
         position: relative;
         width: ceil(3*@mpb);
@@ -119,19 +131,84 @@
             .trs(@t:.2s);
         }
     }
-    &:checked+&-label{
+    &:checked+&-round {
         background-color: @ces;
-        &:before{
+        &:before {
             left: ceil(1.5*@mpb);
         }
-        .danger&{
+        .danger & {
             background-color: @cre;
         }
-        .success&{
+        .success & {
             background-color: @cgr;
         }
-        .warning&{
-            background-color:@cor;
+        .warning & {
+            background-color: @cor;
+        }
+    }
+}
+//
+.vba-check {
+    .list-inline;
+    .mgb(0);
+    input[type="checkbox"],
+    input[type="radio"] {
+        display: none;
+    }
+    input+label {
+        display: inline-block;
+        .bdr;
+        .mgb(0);
+        .pd(ceil(@mpb*0.4) ceil(1.5*@mpb));
+        .trs;
+        cursor: pointer;
+        position: relative;
+        &:hover {
+            border-color: @cre;
+        }
+    }
+    input:checked+label {
+        border-color: @cre;
+        border-width: 2px;
+        &:before {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 20px solid @cre;
+            border-left: 20px solid transparent;
+            z-index: 2;
+        }
+        &:after {
+            content: "\e60b";
+            right: 0;
+            bottom: 1px;
+            width: @mpb;
+            height: @mpb;
+            color: @cwh;
+            .iconfont;
+            position: absolute;
+            z-index: 3;
+        }
+    }
+    &.has-info {
+        > li {
+            display: block;
+            .mgb(ceil(@mpb/2));
+            label {
+                min-width: @mpb*10;
+                .tac;
+            }
+        }
+        li+li{
+            .mgt;
+        }
+        .info {
+            display: inline-block;
+            .mgb(0);
+            .pdl(ceil(@mpb/2));
         }
     }
 }

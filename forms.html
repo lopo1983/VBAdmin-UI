@@ -65,7 +65,8 @@
 						</div>
 						<div class="col-md-4">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="默认不需要跟label">
+								<input type="text" class="form-control line" disabled="disabled" placeholder="禁用">
+								<label class="line-label"></label>
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -92,7 +93,7 @@
 						<div class="col-md-6">
 							<div class="select">
 								<select class="form-control line" disabled="disabled">
-									<option value="">select disabled</option>
+									<option value="">select 禁用</option>
 								</select>
 								<label class="line-label"></label>
 							</div>
@@ -108,7 +109,7 @@
 							<input type="range" />
 						</div>
 						<div class="col-md-6">
-							<input type="range" class="danger"/>
+							<input type="range" class="danger" />
 						</div>
 						<div class="col-md-6">
 							<input type="range" class="success" />
@@ -124,19 +125,22 @@
 							</div>
 						</div>
 						<div class="col-md-3">
-							<label class="toggle-label">打开</label>
+							<label class="toggle-label">默认：</label>
 							<input type="checkbox" class="toggle" name="" id="t11" value="" />
 							<label class="toggle-round" for="t11"></label>
 						</div>
 						<div class="col-md-3">
+							<label class="toggle-label">danger：</label>
 							<input type="checkbox" class="toggle danger" name="" id="t12" value="" />
 							<label class="toggle-round" for="t12"></label>
 						</div>
 						<div class="col-md-3">
+							<label class="toggle-label">success：</label>
 							<input type="checkbox" class="toggle success" name="" id="t13" value="" />
 							<label class="toggle-round" for="t13"></label>
 						</div>
 						<div class="col-md-3">
+							<label class="toggle-label">warning：</label>
 							<input type="checkbox" class="toggle warning" name="" id="t14" value="" />
 							<label class="toggle-round" for="t14"></label>
 						</div>
@@ -277,18 +281,42 @@
 					<div class="exp-box row">
 						<div class="col-md-12">
 							<div class="page-header">
-								<h4>Formgroup</h4>
+								<h4>默认样式</h4>
 							</div>
 						</div>
 						<div class="col-md-12">
 							<form>
 								<div class="form-group">
-									<label>邮件地址</label>
+									<label class="control-label">邮件地址</label>
 									<input type="email" class="form-control line" placeholder="请输入邮件">
 									<label class="line-label"></label>
 								</div>
 								<div class="form-group">
-									<label>密码</label>
+									<label class="control-label">密码</label>
+									<input type="password" class="form-control line" placeholder="输入密码">
+									<label class="line-label"></label>
+								</div>
+								<div class="checkbox">
+									<input class="vba-ck" type="checkbox" name="ckf" id="checkboxf" value="">
+									<label class="vba-chekbox" for="checkboxf">记住用户信息</label>
+								</div>
+								<button type="button" class="btn btn-ces btn-default">点击提交</button>
+							</form>
+						</div>
+					</div>
+					<div class="exp-box row">
+						<div class="col-md-12">
+							<div class="page-header">
+								<h4>inline样式</h4>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<form class="form-inline">
+								<div class="form-group">
+									<input type="email" class="form-control line" placeholder="请输入邮件">
+									<label class="line-label"></label>
+								</div>
+								<div class="form-group">
 									<input type="password" class="form-control line" placeholder="输入密码">
 									<label class="line-label"></label>
 								</div>
@@ -297,6 +325,73 @@
 									<label class="vba-chekbox" for="checkboxf">记住用户信息</label>
 								</div>
 								<button type="button" class="btn btn-default">点击提交</button>
+							</form>
+						</div>
+					</div>
+					<div class="exp-box row">
+						<div class="col-md-12">
+							<div class="page-header">
+								<h4>默认样式</h4>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<form class="form-horizontal">
+								<div class="form-group">
+									<label class="control-label col-sm-2">邮件地址:</label>
+									<div class="col-sm-10">
+										<input type="email" class="form-control line" placeholder="请输入邮件">
+										<label class="line-label"></label>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-2">密码:</label>
+									<div class="col-sm-10">
+										<input type="password" class="form-control line" placeholder="输入密码">
+										<label class="line-label"></label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-10 col-sm-offset-2">
+										<div class="checkbox">
+											<input class="vba-ck" type="checkbox" name="ckf" id="checkboxf" value="">
+											<label class="vba-chekbox" for="checkboxf">记住用户信息</label>
+										</div>
+
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-10  col-sm-offset-2">
+										<button type="button" class="btn btn-ces btn-default">点击提交</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row exp-box">
+						<div class="col-md-12">
+							<div class="page-header">
+								<h4>禁用全部表单</h4>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<form>
+								<fieldset disabled="disabled">
+									<div class="form-group">
+										<label class="control-label">邮件地址</label>
+										<input type="email" class="form-control line" placeholder="请输入邮件">
+										<label class="line-label"></label>
+									</div>
+									<div class="form-group">
+										<label class="control-label">密码</label>
+										<input type="password" class="form-control line" placeholder="输入密码">
+										<label class="line-label"></label>
+									</div>
+									<div class="checkbox">
+										<input class="vba-ck" type="checkbox" name="ckf" id="checkboxf" value="">
+										<label class="vba-chekbox" for="checkboxf">记住用户信息</label>
+									</div>
+									<button type="button" class="btn btn-default">点击提交</button>
+								</fieldset>
 							</form>
 						</div>
 					</div>

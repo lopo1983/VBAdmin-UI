@@ -20,7 +20,8 @@
                 &,
                 td {
                     &:first-child {
-                        .pdl(2*@mpb);
+//                      .pdl(2*@mpb);
+                        .tac;
                     }
                 }
             }
@@ -87,17 +88,15 @@
             
         }
         th,td{
-            
+            &.control{
+                .pd(0);
+                vertical-align: middle;
+                .tac;
+            }
         }
         a,button{
             &.control{
-                .pd(8px);
-                .bdr;
-                background-color: @ces;         
-                .iconfont{
-                    color: @cwh;
-                    font-size: 14px;
-                }
+
             }
         }
     }
@@ -124,7 +123,7 @@
         }
         background-color: @cbsw;
         .control{
-            background-color: @cgr;
+//          background-color: @cgr;
         }
     }  
     tr.filter{
@@ -157,7 +156,7 @@
     .form-group{
         .mgb(0);
     }
-    &-ces {
+    &.ces {
         >tbody {
             >tr {
                 .table-striped& {
@@ -173,4 +172,14 @@
             }
         }
     }
+    &.tools{
+        min-width: 1000px;
+        
+    }
+    &:not(&-bordered){
+        .bdrb
+    }
+}
+.table+.table{
+    margin-top: 2*@mpb;
 }

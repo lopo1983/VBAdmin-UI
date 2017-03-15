@@ -329,24 +329,25 @@ html {
             }
         }
     }
-    &-nav{
-        .nav+.nav,.nav+.row,.row+.row{
+    &-nav {
+        .nav+.nav,
+        .nav+.row,
+        .row+.row {
             .mgt;
         }
     }
-    &-label{
-        
-    }
+    &-label {
+        }
 }
 //
 #exp-cavmix {
     &1 {
         background: url("../../img/bg.jpg") no-repeat top center;
-        background-size: 100% auto;
+        background-size: auto 100%;
     }
     &2 {
         background: url("../../img/bg1.jpg") no-repeat center right;
-        background-size: 100% auto;
+        background-size: auto 100%;
     }
     &3 {
         background: url("../../img/Dphone.jpg") no-repeat center right;
@@ -366,29 +367,36 @@ html {
     }
 }
 //
-#nav-mix{
+#nav-mix {
     background-color: @cwh;
     .pd(@mpb);
 }
-#expbox{
-    &-form{
-//      background-color: @cwh;
+#expbox {
+    &-form {
+        //      background-color: @cwh;
     }
-}
-.exp{
-    &-tit{
-        h3{
-            color: @cc2;
+    &-table {
+        .mgt(2*@mpb);
+        .exp-box+.exp-box{
+            .mgt(2*@mpb)
         }
     }
-    &-box{
+}
+.exp {
+    &-tit {
+        h3 {
+            color: @cc2;
+            .mgb(2*@mpb);
+        }
+    }
+    &-box {
         background-color: @cwh;
         .pd;
-        .input-group{
+        .input-group {
             .mgb;
         }
     }
-    &-box+&-box{
+    &-box+&-box {
         .mgt(ceil(2*@mpb));
     }
 }
