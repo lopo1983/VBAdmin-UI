@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<!--这里未使用定制bootstrap，而是使用覆盖的方式，是为了大家届时替换为第三方cdn-->
+		<link rel="stylesheet" href="css/lib/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="css/lib/swiper-3.3.1.min.css" />
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_7zio588bqqxxyldi.css" />
+		<!--[if lt IE 9]>
+ 	    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+ 	    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+   		<![endif]-->
+		<!--<link rel="stylesheet" href="css/css/style.css?v0.001" />-->
+		<link rel="stylesheet/less" type="text/css" href="css/less/style.less?v1.0.0" />
+		<script type="text/javascript" src="js/lib/less.js"></script>
+	</head>
+
+	<body>
+		<div class="full-width vba-box" style="margin-bottom: 0;">
+			<div class="mask">
+			</div>
+			<div class="logo-info">
+				<div class="mix material-hover">
+					<h1 class="name">Table</h1>
+					<a class="btn btn-round coding" href="https://coding.net/u/lopo/p/VBAdmin-UI/git">点击下载</a>
+					<p class="vison text-center text-white">当前版本 v1.0.0-alpha.1</p>
+				</div>
+			</div>
+			<div class="mouse"></div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+
+				</div>
+				<div class="col-md-9" id="expbox-table">
+					<div class="exp-box row">
+						<div class="col-md-12">
+							<div class="page-header">
+								<h4>table</h4>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Username</th>
+										<th>Tel</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+										<td>13090909600</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+										<td>13090909601</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+										<td>13090909602</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="exp-box row">
+						<div class="col-md-12">
+							<div class="page-header">
+								<h4>table-striped</h4>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Username</th>
+										<th>Tel</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+										<td>13090909600</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+										<td>13090909601</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+										<td>13090909602</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="exp-box row">
+						<div class="col-md-12">
+							<div class="page-header">
+								<h4>table-striped ces</h4>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<table class="table table-striped ces">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Username</th>
+										<th>Tel</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+										<td>13090909600</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+										<td>13090909601</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+										<td>13090909602</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="exp-box row">
+						<div class="col-md-12">
+							<div class="page-header">
+								<h4>table-bordered</h4>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Username</th>
+										<th>Tel</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+										<td>13090909600</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+										<td>13090909601</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+										<td>13090909602</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="exp-box row">
+						<div class="col-md-12">
+							<div class="page-header">
+								<h4>table-hover</h4>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<table class="table ces table-hover">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Username</th>
+										<th>Tel</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+										<td>13090909600</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+										<td>13090909601</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+										<td>13090909602</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="exp-box row">
+						<div class="col-md-12">
+							<div class="page-header">
+								<h4>带提示的table</h4>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>编号</th>
+										<th>用户姓名</th>
+										<th>用户姓名</th>
+										<th>用户账号</th>
+										<th>电话</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="active">
+										<th scope="row">1</th>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+										<td>13090909600</td>
+									</tr>
+									<tr class="info">
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+										<td>13090909601</td>
+									</tr>
+									<tr class="danger">
+										<th scope="row">3</th>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+										<td>13090909602</td>
+									</tr>
+									<tr class="warning">
+										<th scope="row">4</th>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+										<td>13090909602</td>
+									</tr>
+									<tr class="success">
+										<th scope="row">5</th>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+										<td>13090909602</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="exp-box row">
+						<div class="col-md-12">
+							<div class="page-header">
+								<h4>可编辑的table样式</h4>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class=" table-responsive">
+								<table class="table tools">
+									<thead>
+										<tr class="sortmix">
+											<th class="lock">
+												<input class="vba-ck" type="checkbox" name="ckf" id="checkboxf" value="">
+												<label class="vba-chekbox" for="checkboxf"></label>
+											</th>
+											<th class="lock">编号</th>
+											<th><button type="button" class="btn">用户姓名</button></th>
+											<th><button type="button" class="btn">用户姓名</button></th>
+											<th><button type="button" class="btn">用户账号</button></th>
+											<th><button type="button" class="btn">用户电话</button></th>
+											<th class="lock">操作</th>
+										</tr>
+										<tr class="filter">
+											<th class="lock">
+											</th>
+											<th>
+												<div class="form-group">
+													<input type="text" class="form-control line" placeholder="">
+													<label class="line-label"></label>
+												</div>
+											</th>
+											<th>
+												<div class="form-group">
+													<input type="text" class="form-control line" placeholder="">
+													<label class="line-label"></label>
+												</div>
+											</th>
+											<th>
+												<div class="form-group">
+													<input type="text" class="form-control line" placeholder="">
+													<label class="line-label"></label>
+												</div>
+											</th>
+											<th>
+												<div class="form-group">
+													<input type="text" class="form-control line" placeholder="">
+													<label class="line-label"></label>
+												</div>
+											</th>
+											<th>
+												<div class="form-group">
+													<input type="text" class="form-control" placeholder="">
+												</div>
+											</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<input class="vba-ck" type="checkbox" name="ckf" id="checkboxf" value="">
+												<label class="vba-chekbox" for="checkboxf"></label>
+											</td>
+											<th scope="row">100321</th>
+											<td>Mark</td>
+											<td>Otto</td>
+											<td>@mdo</td>
+											<td>13090909600</td>
+											<td class="control">
+												<a class="control" href=""><span class="iconfont icon-edit"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input class="vba-ck" type="checkbox" name="ckf" id="checkboxf" value="">
+												<label class="vba-chekbox" for="checkboxf"></label>
+											</td>
+											<th scope="row">100322</th>
+											<td>Jacob</td>
+											<td>Thornton</td>
+											<td>@fat</td>
+											<td>13090909601</td>
+											<td class="control">
+												<a class="control" href=""><span class="iconfont icon-edit"></span></a>
+											</td>
+										</tr>
+										<tr>
+											<td><input class="vba-ck" type="checkbox" name="ckf" id="checkboxf" value="">
+												<label class="vba-chekbox" for="checkboxf"></label></td>
+											<th scope="row">100323</th>
+											<td>Larry</td>
+											<td>the Bird</td>
+											<td>@twitter</td>
+											<td>13090909602</td>
+											<td class="control">
+												<a class="control" href=""><span class="iconfont icon-edit"></span></a>
+											</td>
+										</tr>
+										<tr class="edit">
+											<td class="lock"></td>
+											<th scope="row" class="lock">100324</th>
+											<td>
+												<div class="form-group">
+													<input type="text" class="form-control line" value="Larry">
+													<label class="line-label"></label>
+												</div>
+											</td>
+											<td>
+												<div class="form-group">
+													<input type="text" class="form-control line" value="The Bird">
+													<label class="line-label"></label>
+												</div>
+											</td>
+											<td>
+												<div class="form-group">
+													<input type="text" class="form-control line" value="@twitter">
+													<label class="line-label"></label>
+												</div>
+											</td>
+											<td>
+												<div class="form-group">
+													<input type="text" class="form-control" value="13090909602">
+												</div>
+											</td>
+											<td class="lock control">
+												<a class="control" href=""><span class="iconfont icon-right"></span></a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="exp-box row">
+						<div class="col-md-12">
+							<div class="page-header">
+								<h4>ShopCar 示例</h4>
+								<p>navbar + table + tab（bootstrap js插件）</p>
+							</div>
+						</div>
+						<div class="col-md-12 shop">
+							<div class="swiper-container">
+								<ul class="nav nav-pills nav-justified shop-step">
+									<li class="active">
+										<a>订单列表</a>
+									</li>
+									<li>
+										<a>订单信息</a>
+									</li>
+									<li>
+										<a>订单支付</a>
+									</li>
+									<li>
+										<a>订单状态</a>
+									</li>
+								</ul>
+								<div class="swiper-wrapper itemlist active">
+									<div class="swiper-slide active">
+										<table class="table">
+											<thead>
+												<tr class="heading">
+													<th>商品</th>
+													<th>单价</th>
+													<th>数量</th>
+													<th>小计</th>
+													<th class="lock"></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="item">
+														<div class="media">
+															<div class="media-left">
+																<img class="media-object" src="img/pr04.jpg" />
+															</div>
+															<div class="media-body">
+																<h4 class="tit">卡西欧 G-SHOCK MTG-S1030BD</h4>
+																<p class="msg">黑色 树脂表带</p>
+															</div>
+														</div>
+													</td>
+													<td class="money">9990.00</td>
+													<td class="count">
+														<div class="input-group">
+															<a class="input-group-addon"><span class="iconfont icon-minus"></span></a>
+															<input type="text" class="form-control" value="1">
+															<a class="input-group-addon"><span class="iconfont icon-plus"></span></a>
+														</div>
+													</td>
+													<td class="total money">9990.00</td>
+													<td class="control">
+														<a href=""><span class="iconfont icon-close"></span></a>
+													</td>
+												</tr>
+												<tr>
+													<td class="item">
+														<div class="media">
+															<div class="media-left">
+																<img class="media-object" src="img/pr05.jpg" />
+															</div>
+															<div class="media-body">
+																<h4 class="tit">卡西欧 G-SHOCK MTG-S1030BD</h4>
+																<p class="msg">黑色 树脂表带</p>
+															</div>
+														</div>
+													</td>
+													<td class="money">9990.00</td>
+													<td class="count">
+														<div class="input-group">
+															<a class="input-group-addon"><span class="iconfont icon-minus"></span></a>
+															<input type="text" class="form-control" value="1">
+															<a class="input-group-addon"><span class="iconfont icon-plus"></span></a>
+														</div>
+													</td>
+													<td class="total money">9990.00</td>
+													<td class="control">
+														<a href=""><span class="iconfont icon-close"></span></a>
+													</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2">
+														<ul class="vba-check">
+															<li><span>使用优惠券：</span></li>
+															<li>
+																<input type="checkbox" checked="checked" name="cardmix" id="card1" />
+																<label class="border" for="card1">老板不在家 减 2000</label>
+															</li>
+															<li>
+																<input type="checkbox" name="cardmix" id="card2" />
+																<label for="card2">满100减40</label>
+															</li>
+														</ul>
+													</td>
+													<td colspan="2">
+														<dl class="dl-horizontal">
+															<dt>已节省:</dt>
+															<dd><s class="money text-danger">-40.00</s></dd>
+															<dt>合计:</dt>
+															<dd class="totalmix"><span class="money">17960.00</span></dd>
+														</dl>
+													</td>
+													<td></td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+									<div class="swiper-slide">
+										<div class="userinfo">
+											<h4 class="info">发票信息</h4>
+											<div class="col-md-6">
+												<div class="input-group">
+													<span class="input-group-addon" id="basic-addon1"><span class="iconfont icon-edit"></span></span>
+													<input type="text" class="form-control line" value="上海七朵信息技术有限公司">
+													<label class="line-label"></label>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="input-group">
+													<span class="input-group-addon" id="basic-addon1"><span class="iconfont icon-edit"></span></span>
+													<input type="text" class="form-control line" value="00000000000000000000">
+													<label class="line-label"></label>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="input-group">
+													<span class="input-group-addon" id="basic-addon1"><span class="iconfont icon-edit"></span></span>
+													<div class="select col-md-4">
+														<select class="form-control line">
+															<option value="">所在省/市</option>
+															<option selected="selected" value="">上海市</option>
+															<option value="">北京</option>
+														</select>
+														<label class="line-label"></label>
+													</div>
+													<div class="select col-md-4">
+														<select class="form-control line">
+															<option value="">请选择</option>
+															<option selected="selected" value="">浦东新区</option>
+															<option value="">朝阳区</option>
+														</select>
+														<label class="line-label"></label>
+													</div>
+													<div class="select col-md-4">
+														<select class="form-control line">
+															<option value="">请选择</option>
+															<option selected="selected" value="">周浦镇</option>
+															<option value="">管庄</option>
+														</select>
+														<label class="line-label"></label>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="input-group">
+													<span class="input-group-addon" id="basic-addon1"><span class="iconfont icon-spcar"></span></span>
+													<input type="text" class="form-control line" placeholder="贵司详细地址" value="上海 浦东新区 周浦镇">
+													<label class="line-label"></label>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="input-group">
+													<span class="input-group-addon" id="basic-addon1"><span class="iconfont icon-edit"></span></span>
+													<input type="text" class="form-control line" placeholder="贵司开户银行" value="建设银行 上海分行">
+													<label class="line-label"></label>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="input-group">
+													<span class="input-group-addon" id="basic-addon1"><span class="iconfont icon-edit"></span></span>
+													<input type="text" class="form-control line" placeholder="贵司银行帐号" value="000000000000000">
+													<label class="line-label"></label>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="input-group">
+													<span class="input-group-addon" id="basic-addon1"><span class="iconfont icon-edit"></span></span>
+													<input type="text" class="form-control line" placeholder="联系电话" value="021-66669999">
+													<label class="line-label"></label>
+												</div>
+											</div>
+											<div class="clearfix"></div>
+											<hr />
+											<h4 class="info">邮寄地址：</h4>
+											<ul class="vba-check has-info">
+												<li>
+													<input type="radio" checked="checked" name="cardmix" id="card3" />
+													<label class="border" for="card3">lopo 上海</label>
+													<p class="info">LOPO 上海 浦东新区 周浦镇 美林小城沪南路3468弄 154号 601 136****7663</p>
+												</li>
+												<li>
+													<input type="radio" name="cardmix" id="card4" />
+													<label class="border" for="card4">lopo 上海</label>
+													<p class="info">LOPO 上海 浦东新区 周浦镇 美林小城沪南路3468弄 154号 601 136****7663</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="paybox">
+											<ul class="list-inline row paybox-item">
+												<li class="col-xs-4">
+													<a class="iconfont icon-yinxingqia"></a>
+													<h4>银行卡/网银支付</h4>
+												</li>
+												<li class="col-xs-4">
+													<a class="iconfont icon-weixin1"></a>
+													<h4>微信支付</h4>
+												</li>
+												<li class="col-xs-4">
+													<a class="iconfont icon-zhifubao"></a>
+													<h4>支付宝支付</h4>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="swiper-slide">
+
+									</div>
+								</div>
+							</div>
+							<nav id="pageCtrol">
+								<ul class="pager">
+									<li class="previous">
+										<a><span class="iconfont icon-arrow-left-thin"></span>继续购物</a>
+									</li>
+									<li class="next">
+										<a>去结算<span class="iconfont icon-arrow-right-thin"></span></a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/lib/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/lib/swiper-3.3.1.jquery.min.js"></script>
+		<!--		<script type="text/javascript" src="js/lib/exp.js"></script>
+-->
+		<script>
+			var mySwiper = new Swiper('.swiper-container', {
+				simulateTouch: false,
+				onSlideChangeStart: function(swiper) {
+					setNav(swiper.activeIndex);
+					swiper.activeIndex == 2 ? mySwiper.lockSwipeToNext():mySwiper.unlockSwipeToNext();
+				}
+			});
+			$('#pageCtrol .next').on('click', function() {
+				mySwiper.slideNext();
+			});
+			$('#pageCtrol .previous').on('click', function() {
+				mySwiper.slidePrev();
+			})
+
+			function setNav(i) {
+				$('.shop-step li').eq(i).addClass('active').siblings().removeClass('active');
+			}
+		</script>
+	</body>
+
+</html>
+<!--
+                       ::
+                      :;J7, :,                        ::;7:
+                      ,ivYi, ,                       ;LLLFS:
+                      :iv7Yi                       :7ri;j5PL
+                     ,:ivYLvr                    ,ivrrirrY2X,
+                     :;r@Wwz.7r:                :ivu@kexianli.
+                    :iL7::,:::iiirii:ii;::::,,irvF7rvvLujL7ur
+                   ri::,:,::i:iiiiiii:i:irrv177JX7rYXqZEkvv17
+                ;i:, , ::::iirrririi:i:::iiir2XXvii;L8OGJr71i
+              :,, ,,:   ,::ir@mingyi.irii:i:::j1jri7ZBOS7ivv,
+                 ,::,    ::rv77iiiriii:iii:i::,rvLq@huhao.Li
+             ,,      ,, ,:ir7ir::,:::i;ir:::i:i::rSGGYri712:
+           :::  ,v7r:: ::rrv77:, ,, ,:i7rrii:::::, ir7ri7Lri
+          ,     2OBBOi,iiir;r::        ,irriiii::,, ,iv7Luur:
+        ,,     i78MBBi,:,:::,:,  :7FSL: ,iriii:::i::,,:rLqXv::
+        :      iuMMP: :,:::,:ii;2GY7OBB0viiii:i:iii:i:::iJqL;::
+       ,     ::::i   ,,,,, ::LuBBu BBBBBErii:i:i:i:i:i:i:r77ii
+      ,       :       , ,,:::rruBZ1MBBqi, :,,,:::,::::::iiriri:
+     ,               ,,,,::::i:  @arqiao.       ,:,, ,:::ii;i7:
+    :,       rjujLYLi   ,,:::::,:::::::::,,   ,:i,:,,,,,::i:iii
+    ::      BBBBBBBBB0,    ,,::: , ,:::::: ,      ,,,, ,,:::::::
+    i,  ,  ,8BMMBBBBBBi     ,,:,,     ,,, , ,   , , , :,::ii::i::
+    :      iZMOMOMBBM2::::::::::,,,,     ,,,,,,:,,,::::i:irr:i:::,
+    i   ,,:;u0MBMOG1L:::i::::::  ,,,::,   ,,, ::::::i:i:iirii:i:i:
+    :    ,iuUuuXUkFu7i:iii:i:::, :,:,: ::::::::i:i:::::iirr7iiri::
+    :     :rk@Yizero.i:::::, ,:ii:::::::i:::::i::,::::iirrriiiri::,
+     :      5BMBBBBBBSr:,::rv2kuii:::iii::,:i:,, , ,,:,:i@petermu.,
+          , :r50EZ8MBBBBGOBBBZP7::::i::,:::::,: :,:,::i;rrririiii::
+              :jujYY7LS0ujJL7r::,::i::,::::::::::::::iirirrrrrrr:ii:
+           ,:  :@kevensun.:,:,,,::::i:i:::::,,::::::iir;ii;7v77;ii;i,
+           ,,,     ,,:,::::::i:iiiii:i::::,, ::::iiiir@xingjief.r;7:i,
+        , , ,,,:,,::::::::iiiiiiiiii:,:,:::::::::iiir;ri7vL77rrirri::
+         :,, , ::::::::i:::i:::i:i::,,,,,:,::i:i:::iir;@Secbone.ii:::
+-->

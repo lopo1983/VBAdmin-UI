@@ -21,7 +21,7 @@
                 &:after {
                     content: "";
                     position: absolute;
-                    bottom: 0;
+                    bottom: -1px;
                     left: 0;
                     right: 0;
                     width: 0;
@@ -125,6 +125,42 @@
         .clear;
         .pd(2*@mpb 3*@mpb);
         .pdb(0);
+    }
+    .paybox{
+        .pd(4*@mpb);
+        &-item{
+            li{
+                .tac;
+                h4{
+                    .blod;
+                    .mgt(@mpb/3);
+                }
+            }
+            .icon{
+                &font{
+                    font-size: 8*@mpb;
+                    color: @cc2;
+                    &:hover{
+                        .unl;
+                    }
+                    &.icon-weixin1{
+                        &:hover{
+                            color: @cgr;
+                        }
+                    }
+                    &.icon-zhifubao{
+                        &:hover{
+                            color: @cbl;
+                        }
+                    }
+                    &.icon-yinxingqia{
+                        &:hover{
+                            color: @cbla;
+                        }
+                    }
+                }
+            }
+        }
     }
     .pager {
         > li {
