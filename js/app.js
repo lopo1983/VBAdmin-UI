@@ -17,18 +17,6 @@ $(function() {
 	$('#carousel-imgnews-generic-full').find('.count-mix .in').each(function() {
 		$(this).text($(this).parents('.item').index() + 1);
 	});
-//	$('#video-mix').affix({
-//		offset: {
-//			top: function(){
-//				if($('#topNav').height()!=null){
-//					return $('#topNav').height();
-//				}else{
-//					console.log('请检查导航条是否正常');
-//					return $('#video-mix').offset().top;
-//				}
-//			},
-//		}
-//	});
 });
 $('#carousel-imgnews-generic').on('slid.bs.carousel', function() {
 	var a = $("#carousel-imgnews-generic").find('.item.active').index() + 1;

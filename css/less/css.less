@@ -1,11 +1,18 @@
 /*httpimg*/
+
 @bgimg: "https://qmarket.bj.bcebos.com/PB150703.jpg";
+
 /*颜色变量*/
+
 @ces: @cbl; //颜色网站基础色 阿森纳红
 @cun: transparent; //透明背景
 @cwh: rgb(255, 255, 255); //白色
+
 /*flat 推荐颜色*/
+
+
 /*http://bsfans.com/fc/index.html*/
+
 @cor: rgb(230, 126, 34); //橙色
 @cor1: rgb(211, 84, 0);
 @cbl: rgb(52, 152, 219); //蓝色
@@ -18,165 +25,291 @@
 @cre1: rgb(192, 57, 43);
 @cgy: rgb(236, 240, 241); //灰色
 @cgy1: rgb(189, 195, 199);
-@cbla: rgb(0,0,0); //黑色
+@cbla: rgb(0, 0, 0); //黑色
 //
+
 /*文字颜色*/
-@cc: rgb(68,68,68); //文字主要颜色
-@cc1: rgb(46,46,46); //文字主要颜色
-@cc2: rgb(153,153,153); //文字主要颜色
-@cc3: rgb(51,51,51); //文字主要颜色
+
+@cc: rgb(68, 68, 68); //文字主要颜色
+@cc1: rgb(46, 46, 46); //文字主要颜色
+@cc2: rgb(153, 153, 153); //文字主要颜色
+@cc3: rgb(51, 51, 51); //文字主要颜色
+@cc4: rgb(246, 246, 246); //黑色背景颜色
+
 /*背景色*/
+
 @bgc: rgb(34, 34, 34);
 @bgcc: rgb(21, 33, 47);
 @bgc1: rgb(241, 241, 241);
-@bgc2: rgb(238,238,238);
-@bgc3: rgb(70,69,83);
+@bgc2: rgb(238, 238, 238);
+@bgc3: rgb(70, 69, 83);
 @bgc4: rgb(54, 62, 75);
 //
 @cbsw: rgb(252, 248, 227);
 //
+
 /*边框颜色*/
+
 @bdrc: rgb(225, 225, 225); //边框颜色
+
 /*自定义颜色占位*/
 
+
 /*   */
+
+
 /*其他常用变量*/
+
+
 /*文字*/
-@ffmix: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+
+@ffmix: "Helvetica Neue",
+Helvetica,
+Arial,
+"Microsoft Yahei",
+"Hiragino Sans GB",
+"Heiti SC",
+"WenQuanYi Micro Hei",
+sans-serif;
 //
-@rem: 14px; //
+@rem: 12px; //
 @hack: ~"\9"; //
+@mpb: 15px; //基础单位
 //
 //边框控制
-.bdr(@w:1px, @s:solid, @cr:@bdrc) {
+.bdr(@w: 1px, @s: solid, @cr: @bdrc) {
     border: @w @s @cr;
 }
-.bdrt(@w:1px, @s:solid, @cr:@bdrc) {
+
+.bdrt(@w: 1px, @s: solid, @cr: @bdrc) {
     border-top: @w @s @cr;
 }
-.bdrr(@w:1px, @s:solid, @cr:@bdrc) {
+
+.bdrr(@w: 1px, @s: solid, @cr: @bdrc) {
     border-right: @w @s @cr;
 }
-.bdrb(@w:1px, @s:solid, @cr:@bdrc) {
+
+.bdrb(@w: 1px, @s: solid, @cr: @bdrc) {
     border-bottom: @w @s @cr;
 }
-.bdrl(@w:1px, @s:solid, @cr:@bdrc) {
+
+.bdrl(@w: 1px, @s: solid, @cr: @bdrc) {
     border-left: @w @s @cr;
 }
+
 //内外边距控制
-@mpb: 15px; //基础单位
-.mg(@a:@mpb) {
+.mg(@a: @mpb) {
     margin: @a;
 }
-.mgt(@a:@mpb) {
+
+.mgt(@a: @mpb) {
     margin-top: @a;
 }
-.mgr(@a:@mpb) {
+
+.mgr(@a: @mpb) {
     margin-right: @a;
 }
-.mgb(@a:@mpb) {
+
+.mgb(@a: @mpb) {
     margin-bottom: @a;
 }
-.mgl(@a:@mpb) {
+
+.mgl(@a: @mpb) {
     margin-left: @a;
 }
-.pd(@a:@mpb) {
+
+.pd(@a: @mpb) {
     padding: @a;
 }
-.pdt(@a:@mpb) {
+
+.pdt(@a: @mpb) {
     padding-top: @a;
 }
-.pdr(@a:@mpb) {
+
+.pdr(@a: @mpb) {
     padding-right: @a;
 }
-.pdb(@a:@mpb) {
+
+.pdb(@a: @mpb) {
     padding-bottom: @a;
 }
-.pdl(@a:@mpb) {
+
+.pdl(@a: @mpb) {
     padding-left: @a;
 }
+
 //clear
-.clear{
-    &:before,&:after{
+.clear {
+    &:after,
+    &:before {
         content: "";
         display: table;
     }
-    &:after{
+    &:after {
         clear: both;
     }
 }
+
 //居中
 .amid {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
+
 .flmm {
     display: flex;
     display: -webkit-flex;
     justify-content: center;
     align-items: center;
 }
+
+
+/**
+* animation
+*/
+
+.key (@prefix, @name, @content) when (@prefix=def) {
+    @keyframes @name {
+        @content();
+    }
+}
+
+.key (@prefix, @name, @content) when (@prefix=moz) {
+    @-moz-keyframes @name {
+        @content();
+    }
+}
+
+.key (@prefix, @name, @content) when (@prefix=o) {
+    @-o-keyframes @name {
+        @content();
+    }
+}
+
+.key (@prefix, @name, @content) when (@prefix=webkit) {
+    @-webkit-keyframes @name {
+        @content();
+    }
+}
+
+.key (@prefix, @name, @content) when (@prefix=all) {
+    .key(moz, @name, @content);
+    .key(o, @name, @content);
+    .key(webkit, @name, @content);
+    .key(def, @name, @content);
+}
+
+//trandorm
+.trf(@content) {
+    -webkit-transform: @content;
+    -moz-transform: @content;
+    -ms-transform: @content;
+    -o-transform: @content;
+    transform: @content;
+}
+
+//animation
+.ani(@n: ani, @t: 1s, @t2: .5s, @fn: ease-in-out, @i: infinite, @dur: alternate) {
+    animation: @n @t @t2 @fn @i @dur;
+    -webkit-animation: @n @t @t2 @fn @i @dur;
+    -o-animation: @n @t @t2 @fn @i @dur;
+    -moz-animation: @n @t @t2 @fn @i @dur;
+}
+
 //过度
-.trs(@t:.5s, @b: ease-in-out) {
+.trs(@t: .5s, @b: ease-in-out) {
     transition: all @t @b;
     -webkit-transition: all @t @b;
     -ms-transition: all @t @b;
 }
+
 //去除设置
 .unbg {
     background: transparent;
 }
+
 .unbdr {
     border-radius: 0;
 }
+
 .unbd {
     border: none;
 }
+
 .unbs {
     box-shadow: none;
     -webkit-box-shadow: none;
     -ms-box-shadow: none;
 }
+
 .unst {
     padding-left: 0;
     list-style: none;
 }
+
+.list-inline {
+    .unst;
+    >li {
+        display: inline-block;
+//      padding-right: 5px;
+//      padding-left: 5px;
+    }
+}
+
 .unl {
     text-decoration: none;
 }
+
 //杂项
 .round {
     border-radius: 50%;
 }
+
 .ohd {
     overflow: hidden;
 }
+
 //文字方向控制
 .tac {
     text-align: center;
 }
+
 .tal {
     text-align: left;
 }
+
 .tar {
     text-align: right;
 }
+
 .taj {
     text-align: justify;
 }
+
 //
 .textoh {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
+//注意 这个多行隐藏 仅webkit 内核的有效
+.tohline {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
 .blod {
     font-weight: bolder;
 }
+
 //flex center
 .fc {
     display: -webkit-box;
@@ -192,14 +325,15 @@
     -webkit-align-items: center;
     align-items: center;
 }
+
 .mask {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,.5) url("../../img/pattern.png") repeat;
 }
+
 //iconfont 建议使用强大的iconfont
 .iconfont {
     font-family: "iconfont" !important;
@@ -209,12 +343,21 @@
     position: relative;
     display: inline-block;
 }
-//loop
 
-.col-loop(@n, @i:@cgy1) when (@i=<@n) {
+//loop
+.col-loop(@n, @i: @cgy1) when (@i=<@n) {
     .col-xs-@{i} {
         .pdl(0);
         .pdr(0);
     }
-    .col-loop(@n,(@i+1));
+    .col-loop(@n, (@i+1));
+}
+
+//extend
+.absfull {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<!--这里未使用定制bootstrap，而是使用覆盖的方式，是为了大家届时替换为第三方cdn-->
+		<link rel="stylesheet" href="../css/lib/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_c2pskehbifekx1or.css" />
+		<!--[if lt IE 9]>
+ 	    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+ 	    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+   		<![endif]-->
+		<!--<link rel="stylesheet" href="css/css/style.css?v0.001" />-->
+		<link rel="stylesheet/less" type="text/css" href="../css/less/style.less?v1.0.0" />
+		<script type="text/javascript" src="../js/lib/less.js"></script>
+	</head>
+
+	<body>
+		<div class="full-width vba-box">
+			<div class="mask">
+			</div>
+			<div class="logo-info">
+				<div class="mix material-hover">
+					<h1 class="name">LoginBox</h1>
+					<h3 class="name en">UI Template</h3>
+					<p class="text-white info">让你快速构建基于
+						<a href="http://getbootstrap.com/">bootstrap3.3.7</a>的 flat 风格的web站点和后台管理系统页面</p>
+					<a class="btn btn-round coding" href="https://coding.net/u/lopo/p/VBAdmin-UI/git">点击下载</a>
+					<p class="vison text-center text-white">当前版本 v1.0.0-alpha.1</p>
+				</div>
+			</div>
+			<div class="mouse"></div>
+		</div>
+		<div class="container" id="form-mix">
+			<div class="row">
+				<div class="row">
+				<div class=" col-md-4 col-xs-12 exp login">
+					<div class="panel panel-default vba" data-close="true">
+						<a class="close-btn "><span class="iconfont icon-close"></span></a>
+						<div class="panel-body">
+							<h2 class="text-center login-tit">用户注册</h2>
+							<form>
+								<div class="form-group lines">
+									<input type="text" class="form-control line" placeholder="邮箱地址/手机号">
+									<label class="line-label"></label>
+								</div>
+								<div class="form-group lines">
+									<input type="password" class="form-control line" placeholder="用户密码">
+									<label class="line-label"></label>
+								</div>
+								<div class="form-group lines">
+									<input type="password" class="form-control line" placeholder="确认密码">
+									<label class="line-label"></label>
+								</div>
+								<button class="btn btn-black btn-round btn-block btn-lg mat-hover">点击注册</button>
+								<p class="help">点击注册即表示您同意并愿意
+									<a href="">用户协议</a>和
+									<a href="">隐私政策</a>。已有帐号</p>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!--<div class=" col-md-5 col-xs-12 exp login">
+					<div class="panel panel-default vba" data-close="true">
+						<a class="close-btn "><span class="iconfont icon-close"></span></a>
+						<div class="panel-body">
+							<h2 class="text-center login-tit">用户注册</h2>
+							<form>
+								<div class="form-group">
+									<input type="text" class="form-control label-up" id="user" placeholder="邮箱地址/手机号">
+									<label class="line-label" for="user"><span>邮箱地址/手机号</span></label>
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control label-up" id="psd" placeholder="输入密码">
+									<label class="line-label" for="psd"><span>输入密码</span></label>
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control label-up" id="psd1" placeholder="确认密码">
+									<label class="line-label" for="psd1"><span>确认密码</span></label>
+								</div>
+								<button class="btn btn-black btn-round btn-block btn-lg mat-hover">点击注册</button>
+								<p class="help">点击注册即表示您同意并愿意
+									<a href="">用户协议</a>和
+									<a href="">隐私政策</a>。已有
+									<a href="">帐号</a>
+								</p>
+							</form>
+						</div>
+					</div>
+				</div>-->
+				<!--login 模块注册样式-->
+				<div class=" col-md-4 col-xs-12 exp login">
+					<div class="panel panel-default vba" data-close="true">
+						<a class="close-btn "><span class="iconfont icon-close"></span></a>
+						<div class="panel-body">
+							<h2 class="text-center login-tit">用户登录</h2>
+							<form>
+								<div class="form-group lines">
+									<input type="text" class="form-control line" placeholder="邮箱地址/手机号">
+									<label class="line-label"></label>
+								</div>
+								<div class="form-group lines">
+									<input type="password" class="form-control line" placeholder="用户密码">
+									<label class="line-label"></label>
+								</div>
+								<div class="form-group">
+									<div class="checkbox">
+										<input class="vba-ck" type="checkbox" name="" id="checkbox5" value="">
+										<label class="vba-chekbox" for="checkbox5">记住我</label>
+										<a class="pull-right" href="">注册帐号</a>
+										<a class="pull-right" href="">忘记密码</a>
+									</div>
+								</div>
+								<button class="btn btn-ces btn-round btn-block btn-lg mat-hover">点击登录</button>
+							</form>
+						</div>
+						<div class="panel-footer">
+							<div class="mix">
+								<p class="text-white">使用第三方登录</p>
+								<ul class="list-inline row">
+									<li class="col-xs-3">
+										<a class="iconfont icon-qq"></a>
+									</li>
+									<li class="col-xs-3">
+										<a class="iconfont icon-weibo"></a>
+									</li>
+									<li class="col-xs-3">
+										<a class="iconfont icon-weixin1"></a>
+									</li>
+									<li class="col-xs-3">
+										<a class="iconfont icon-zhifubao"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class=" col-md-4 col-xs-12 exp login">
+					<div class="panel panel-default vba" data-close="true">
+						<a class="close-btn "><span class="iconfont icon-close"></span></a>
+						<div class="panel-body">
+							<h2 class="text-center login-tit">用户登录</h2>
+							<form>
+								<div class="form-group lines">
+									<input type="text" class="form-control line" placeholder="邮箱地址/手机号">
+									<label class="line-label"></label>
+								</div>
+								<div class="form-group lines">
+									<input type="password" class="form-control line" placeholder="用户密码">
+									<label class="line-label"></label>
+								</div>
+								<div class="form-group">
+									<div class="checkbox">
+										<input class="vba-ck" type="checkbox" name="" id="checkbox4" value="">
+										<label class="vba-chekbox" for="checkbox4">记住我</label>
+										<a class="pull-right" href="">忘记密码</a>
+									</div>
+								</div>
+								<button class="btn btn-ces btn-round btn-block btn-lg mat-hover">点击登录</button>
+							</form>
+						</div>
+						<div class="panel-footer">
+							<div class="mix">
+								<p class="help">还没有帐号？点击免费
+									<a href="">注册</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--login模块注册样式完-->
+				<div class="clearfix"></div>
+				<!--login 模块状态-->
+				<!--<div class=" col-md-5 col-xs-12 exp login">
+					<div class="panel panel-default vba" data-close="true">
+						<a class="close-btn "><span class="iconfont icon-close"></span></a>
+						<div class="panel-body">
+							<h2 class="text-center login-tit">用户注册</h2>
+							<form>
+								<div class="form-group lines">
+									<input type="text" class="form-control line error" placeholder="邮箱地址/手机号" value="username">
+									<label class="line-label"></label>
+								</div>
+								<div class="form-group lines">
+									<input type="password" class="form-control line success" placeholder="用户密码" value="password">
+									<label class="line-label"></label>
+								</div>
+								<div class="form-group lines">
+									<input type="password" class="form-control line success" placeholder="确认密码" value="password">
+									<label class="line-label"></label>
+								</div>
+								<button class="btn btn-black btn-round btn-block btn-lg mat-hover">点击注册</button>
+								<p class="help">点击注册即表示您同意并愿意
+									<a href="">用户协议</a>和
+									<a href="">隐私政策</a>。已有
+									<a href="">帐号</a>
+								</p>
+							</form>
+						</div>
+					</div>
+				</div>-->
+				<!--login 模块状态-->
+				<!--横向注册登录-->
+				<div class="col-md-12 login inline" id="inline-login">
+					<div class="mask"></div>
+					<div class="mix">
+						<h1 class="text-center text-white tit">免费注册帐号，开启您的梦幻之旅！</h1>
+						<form action="" method="post">
+							<div class="row">
+								<div class="col-md-3">
+									<div class="form-group lines">
+										<input type="text" class="form-control line" placeholder="手机号">
+										<label class="line-label"></label>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group lines">
+										<input type="text" class="form-control line" placeholder="邮箱地址">
+										<label class="line-label"></label>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group lines">
+										<input type="password" class="form-control line" placeholder="密码">
+										<label class="line-label"></label>
+									</div>
+								</div>
+								<div class="col-md-3 text-center">
+									<button class="btn btn-black btn-block btn-round  btn-lg icon">点击注册 <span class="iconfont icon-arrow-right-thin"></span></button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-12 login inline" id="inline-login">
+					<div class="mix">
+						<h1 class="text-center tit">立即登录，享受酣畅淋漓的快感！</h1>
+						<div class="row">
+							<div class="col-md-3">
+								<a class="btn btn-danger btn-block btn-round  btn-lg mat-hover">使用微博登陆 </a>
+							</div>
+							<div class="col-md-3">
+								<a class="btn btn-black btn-block btn-round  btn-lg mat-hover">使用QQ登录</a>
+							</div>
+							<div class="col-md-3 text-center">
+								<a class="btn btn-primary btn-block btn-round  btn-lg mat-hover">使用支付宝登陆</a>
+							</div>
+							<div class="col-md-3 text-center">
+								<a class="btn btn-white  btn-border btn-block btn-round  btn-lg mat-hover">注册帐号</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--横向注册登录完结-->
+				<!--在modal中 使用login 组件-->
+				<div class="col-md-6">
+					<div class="modal fade modal-login in" tabindex="-1" role="dialog">
+						<div class="modal-dialog" role="document" style="width: 400px;">
+							<div class="modal-content">
+								<a class="close-btn "><span class="iconfont icon-close" data-dismiss="modal"></span></a>
+								<div class="modal-body">
+									<div class="panel panel-default vba login" data-close="true">
+										<div class="panel-body">
+											<h2 class="text-center login-tit">用户登录</h2>
+											<form>
+												<div class="form-group lines">
+													<input type="text" class="form-control line" placeholder="邮箱地址/手机号">
+													<label class="line-label"></label>
+												</div>
+												<div class="form-group lines">
+													<input type="password" class="form-control line" placeholder="用户密码">
+													<label class="line-label"></label>
+												</div>
+												<div class="form-group">
+													<div class="checkbox">
+														<input class="vba-ck" type="checkbox" name="" id="checkbox1" value="">
+														<label class="vba-chekbox" for="checkbox1">记住我</label>
+														<a class="pull-right" href="">忘记密码</a>
+													</div>
+												</div>
+												<button class="btn btn-ces btn-round btn-block btn-lg mat-hover">点击登录</button>
+											</form>
+										</div>
+										<div class="panel-footer">
+											<div class="mix">
+												<p class="help">还没有帐号？点击免费
+													<a href="">注册</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="modal fade modal-login in" tabindex="-1" role="dialog">
+						<div class="modal-dialog" role="document" style="width: 400px;">
+							<div class="modal-content">
+								<a class="close-btn "><span class="iconfont icon-close" data-dismiss="modal"></span></a>
+								<div class="modal-body">
+									<div class="panel panel-default vba login" data-close="true">
+										<div class="panel-body">
+											<h2 class="text-center login-tit">用户登录</h2>
+											<form>
+												<div class="form-group lines">
+													<input type="text" class="form-control line" placeholder="邮箱地址/手机号">
+													<label class="line-label"></label>
+												</div>
+												<div class="form-group lines">
+													<input type="password" class="form-control line" placeholder="用户密码">
+													<label class="line-label"></label>
+												</div>
+												<div class="form-group">
+													<div class="checkbox">
+														<input class="vba-ck" type="checkbox" name="" id="checkbox2" value="">
+														<label class="vba-chekbox" for="checkbox2">记住我</label>
+														<a class="pull-right" href="">注册帐号</a>
+														<a class="pull-right" href="">忘记密码</a>
+													</div>
+												</div>
+												<button class="btn btn-ces btn-round btn-block btn-lg mat-hover">点击登录</button>
+											</form>
+										</div>
+										<div class="panel-footer">
+											<div class="mix">
+												<p class="text-white">使用第三方登录</p>
+												<ul class="list-inline row">
+													<li class="col-xs-3">
+														<a class="iconfont icon-qq"></a>
+													</li>
+													<li class="col-xs-3">
+														<a class="iconfont icon-weibo"></a>
+													</li>
+													<li class="col-xs-3">
+														<a class="iconfont icon-weixin1"></a>
+													</li>
+													<li class="col-xs-3">
+														<a class="iconfont icon-zhifubao"></a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--modal 中使用login组件完-->
+				<!--留言组件-->
+				<div class="col-md-4 exp-sendmsg">
+					<form class="form-horizontal">
+						<h2 class="tit text-center">用户留言</h2>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">姓名:</label>
+							<div class="col-sm-9">
+								<input type="email" class="form-control line" id="inputEmail3" placeholder="我们应该怎么称呼您">
+								<label class="line-label"></label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">电话:</label>
+							<div class="col-sm-9">
+								<input type="password" class="form-control line" id="inputPassword3" placeholder="请输入您的手机号码">
+								<label class="line-label"></label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label forta">留言:</label>
+							<div class="col-sm-9">
+								<textarea rows="5" class="form-control line" placeholder="请输入您的留言内容"></textarea>
+								<label class="line-label"></label>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10 col-xs-12">
+								<button class="btn btn-ces btn-block mat-hover btn-round btn-lg">提交留言</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-4 exp-sendmail">
+					<div class="thumbnail thumbnail-bg">
+						<div class="caption">
+							<div class="mix amid">
+								<h3 class="text-white text-center">请填写您的邮箱，订阅我们的最新推送！</h3>
+								<form action="" method="post">
+									<div class="form-group lines">
+										<input type="text" class="form-control pw line fix" placeholder="邮箱地址/手机号">
+										<label class="line-label"></label>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 exp-changesth">
+					<div class="panel panel-default palert">
+						<div class="panel-heading">
+							<h4>修改密码</h4>
+						</div>
+						<div class="panel-body">
+							<div class="form-horizontal">
+								<div class="form-group hasbtn">
+									<div class="col-xs-7">
+										<input type="text" class="form-control line" placeholder="修改手机号码">
+										<label class="line-label"></label>
+									</div>
+									<div class="col-xs-5"><button class="btn btn-black">获取验证码</button></div>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control line" placeholder="修改手机号码">
+									<label class="line-label"></label>
+								</div>
+
+							</div>
+						</div>
+						<div class="panel-footer">
+							<button class="btn btn-ces btn-lg btn-block">确认修改</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 exp-changesth">
+					<div class="panel panel-default palert">
+						<div class="panel-heading">
+							<h4>修改邮箱</h4>
+						</div>
+						<div class="panel-body">
+							<div class="form-group lines">
+								<input type="email" class="form-control pw line success" value="lopo1983@foxmail.com" placeholder="修改手机号码">
+								<label class="line-label"></label>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<button class="btn btn-ces btn-lg btn-block">确认修改</button>
+						</div>
+					</div>
+				</div>
+				<!--留言组件 完-->
+				<div class="clearfix"></div>
+				<!--左右thumb-->
+				<div class="col-md-8">
+					<div class="thumbnail lrmix exp-lrmix">
+						<div class="thumbnail-object">
+							<div class="mix">
+								<h2 class="text-center">VBAdmin-UI <small>V1.0.0 alpha.1 </small></h2>
+								<h4 class="text-center">VBAdmin-UI 让你快速构建基于 bootstrap3.3.7的 flat 风格的web站点和后台管理系统页面</h4>
+							</div>
+						</div>
+						<div class="caption">
+							<div class="exp-sendmsg">
+								<form class="form-horizontal">
+									<h2 class="tit text-center">用户留言</h2>
+									<div class="form-group">
+										<label class="col-sm-3 control-label">姓名:</label>
+										<div class="col-sm-9">
+											<input type="email" class="form-control line" id="inputEmail3" placeholder="我们应该怎么称呼您">
+											<label class="line-label"></label>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label">电话:</label>
+										<div class="col-sm-9">
+											<input type="password" class="form-control line" id="inputPassword3" placeholder="请输入您的手机号码">
+											<label class="line-label"></label>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label forta">留言:</label>
+										<div class="col-sm-9">
+											<textarea rows="5" class="form-control line" placeholder="请输入您的留言内容"></textarea>
+											<label class="line-label"></label>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-offset-1 col-sm-10 col-xs-12">
+											<button class="btn btn-ces btn-block mat-hover btn-round btn-lg">提交留言</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--左右thumb完结-->
+				<!---->
+				<div class="col-md-8">
+					<div class="panel panel-default palert exp-chginfo">
+						<div class="panel-heading">
+							<h4>修改用户设置</h4>
+						</div>
+						<div class="panel-body">
+							<div class="media">
+								<div class="media-left">
+									<img src="img/header.jpg" class="img-circle user-header" />
+								</div>
+								<div class="media-body media-middle">
+									<h2>Mr Sledgehammer Wang</h2>
+									<p class="info">只要足够帅就行,这么说来我也不需要做什么嘛看我如何用这俊朗的五官。忧郁的气质轻易征服她。</p>
+								</div>
+							</div>
+							<div class="mix">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" class="form-control line" value="Mr Sledgehammer Wang" placeholder="昵称">
+										<label class="line-label"></label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="email" class="form-control line" value="sledgehammer@qq.com" placeholder="邮箱地址">
+										<label class="line-label"></label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="tel" class="form-control line" value="13090909600" placeholder="手机号">
+										<label class="line-label"></label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" class="form-control line" value="100010245" placeholder="QQ号">
+										<label class="line-label"></label>
+									</div>
+								</div>
+								<div class="col-xs-12">
+									<div class="form-group">
+										<textarea rows="4" class="form-control line" placeholder="个人说明">梦想这东西和经典一样,永远不会因为时间而退色,反而更显珍贵！</textarea>
+										<label class="line-label"></label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<button class="btn btn-ces btn-lg btn-block">确认修改</button>
+						</div>
+					</div>
+				</div>
+				<!--form扩展使用完-->
+			</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/lib/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="../js/lib/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/lib/exp.js"></script>
+	</body>
+
+</html>
+<!--
+                       ::
+                      :;J7, :,                        ::;7:
+                      ,ivYi, ,                       ;LLLFS:
+                      :iv7Yi                       :7ri;j5PL
+                     ,:ivYLvr                    ,ivrrirrY2X,
+                     :;r@Wwz.7r:                :ivu@kexianli.
+                    :iL7::,:::iiirii:ii;::::,,irvF7rvvLujL7ur
+                   ri::,:,::i:iiiiiii:i:irrv177JX7rYXqZEkvv17
+                ;i:, , ::::iirrririi:i:::iiir2XXvii;L8OGJr71i
+              :,, ,,:   ,::ir@mingyi.irii:i:::j1jri7ZBOS7ivv,
+                 ,::,    ::rv77iiiriii:iii:i::,rvLq@huhao.Li
+             ,,      ,, ,:ir7ir::,:::i;ir:::i:i::rSGGYri712:
+           :::  ,v7r:: ::rrv77:, ,, ,:i7rrii:::::, ir7ri7Lri
+          ,     2OBBOi,iiir;r::        ,irriiii::,, ,iv7Luur:
+        ,,     i78MBBi,:,:::,:,  :7FSL: ,iriii:::i::,,:rLqXv::
+        :      iuMMP: :,:::,:ii;2GY7OBB0viiii:i:iii:i:::iJqL;::
+       ,     ::::i   ,,,,, ::LuBBu BBBBBErii:i:i:i:i:i:i:r77ii
+      ,       :       , ,,:::rruBZ1MBBqi, :,,,:::,::::::iiriri:
+     ,               ,,,,::::i:  @arqiao.       ,:,, ,:::ii;i7:
+    :,       rjujLYLi   ,,:::::,:::::::::,,   ,:i,:,,,,,::i:iii
+    ::      BBBBBBBBB0,    ,,::: , ,:::::: ,      ,,,, ,,:::::::
+    i,  ,  ,8BMMBBBBBBi     ,,:,,     ,,, , ,   , , , :,::ii::i::
+    :      iZMOMOMBBM2::::::::::,,,,     ,,,,,,:,,,::::i:irr:i:::,
+    i   ,,:;u0MBMOG1L:::i::::::  ,,,::,   ,,, ::::::i:i:iirii:i:i:
+    :    ,iuUuuXUkFu7i:iii:i:::, :,:,: ::::::::i:i:::::iirr7iiri::
+    :     :rk@Yizero.i:::::, ,:ii:::::::i:::::i::,::::iirrriiiri::,
+     :      5BMBBBBBBSr:,::rv2kuii:::iii::,:i:,, , ,,:,:i@petermu.,
+          , :r50EZ8MBBBBGOBBBZP7::::i::,:::::,: :,:,::i;rrririiii::
+              :jujYY7LS0ujJL7r::,::i::,::::::::::::::iirirrrrrrr:ii:
+           ,:  :@kevensun.:,:,,,::::i:i:::::,,::::::iir;ii;7v77;ii;i,
+           ,,,     ,,:,::::::i:iiiii:i::::,, ::::iiiir@xingjief.r;7:i,
+        , , ,,,:,,::::::::iiiiiiiiii:,:,:::::::::iiir;ri7vL77rrirri::
+         :,, , ::::::::i:::i:::i:i::,,,,,:,::i:i:::iir;@Secbone.ii:::
+-->

@@ -1,7 +1,7 @@
 body {
     font-family: @ffmix;
     color: @cc;
-    font-size: 14px;
+    font-size: 12px;
 }
 @font-face {
     font-family: 'robote';
@@ -24,20 +24,11 @@ th {
 }
 .full-width {
     position: relative;
-    background-color: @cbla;
     width: 100%;
-    .ohd;
+    .clear;
     z-index: 1;
 }
-//.column-columns-(4);
-//.column-columns-(@n, @i: 1) when (@i =< @n) {
-//  .column-@{i} {
-//      -webkit-column-count: @i;
-//      -moz-column-count: @i;
-//      column-count: @i;
-//  }
-//  .generate-columns(@n, (@i + 1));
-//}
+
 .loopcol(6);
 
 .loopcol(@n, @i: 1) when (@i =< @n) {
@@ -51,21 +42,30 @@ th {
     }
     .loopcol(@n, (@i + 1));
 }
+//
 .mask {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0,0,0,.5) url("../../img/pattern.png") repeat;
-}
-.mixbox {
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
+    &,
+    &-gy,
+    &-round {
+        .absfull;
+    }
+    background: rgba(0,0,0,.1) url("../../img/pattern.png") repeat;
+    &-round {
+        background: -webkit-radial-gradient(rgba(0,0,0,0) 30%,rgba(0,0,0,.1) 60%, rgba(0,0,0,.2));
+        background: -o-radial-gradient(rgba(0,0,0,0) 30%,rgba(0,0,0,.1) 60%, rgba(0,0,0,.2));
+        background: -moz-radial-gradient(rgba(0,0,0,0) 30%,rgba(0,0,0,.1) 60%, rgba(0,0,0,.2));
+        background: radial-gradient(rgba(0,0,0,0) 30%,rgba(0,0,0,.1) 60%, rgba(0,0,0,.2));
+    }
+    &-gy {
+        background-color: rgba(0,0,0,.65);
     }
 }
-.iconfont{
+//
+.mixbox {
+    .clear;
+}
+.iconfont {
     display: inline-block;
+    position: relative;
+    vertical-align: middle;
 }
